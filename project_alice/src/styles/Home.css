@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fef6e4;
+  color: #333;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #b4002d;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: #e6f7ff;
+}
+
+.hero h2 {
+  color: #b4002d;
+  margin-bottom: 15px;
+}
+
+.btn-start {
+  background: #ff3c3c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* CONTENT */
+.content {
+  flex: 1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn-secondary {
+  background: #00c4ff;
+  border: none;
+  padding: 12px 20px;
+  margin: 5px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  background: #333;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+.copy {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
