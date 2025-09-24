@@ -1,27 +1,26 @@
 import React from 'react';
 import '../../styles/Home.css';
-
-// importa a imagem do cenário
-import HeroBg from "../../assets/ImageHome.svg";
+import ImageBackground from "../../assets/ImageHome.svg";
 
 const HeroSection = () => {
   return (
-    <div className="hero-section">
+    <section className="hero-section" style={{ backgroundImage: `url(${ImageBackground})` }}>
       <div className="hero-content">
-        <h1>Bem-vindo ao My Wordland! Explore esse mundo de palavras e magia.</h1>
-        <p>
-          Aqui você pode ler a obra completa da Alice no País das maravilhas!
-          Cuidado para não se perder na toca do coelho...
-        </p>
+        <h1>
+          Bem-vindo ao My Wordland! <br />
+          Explore esse mundo de <br />
+          palavras e magia.
+        </h1>
+       <p>
+        Aqui você pode ler a obra completa da <span class="highlight">Alice no País das Maravilhas</span>!
+        Cuidado para não se perder na toca do coelho...
+       </p>
         <button className="start-button">
-          COMEÇAR <span className="arrow">➜</span>
+          Começar
+          {/*<span className="arrow">➜</span> */}
         </button>
       </div>
-
-      <div className="hero-image">
-        <img src={HeroBg} alt="Cenário Wonderland" />
-      </div>
-    </div>
+    </section>
   );
 };
 
