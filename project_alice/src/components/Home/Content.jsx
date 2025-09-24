@@ -1,24 +1,28 @@
-import React from "react";
+import React from 'react';
+import '../../styles/Home.css';
 
-//puxando as imagens
-import Alice from "../../assets/Imagens/Home/ImageAlice.svg"
-import Cheap from "../../assets/Imagens/Home/ImageCheap.svg"
-import Rabbit from "../../assets/Imagens/Home/ImageRabbit.svg"
-import Cat from "../../assets/Imagens/Home/ImageCat.svg"
+//importando imagens
+import Alice from "../../assets/Imagens/Home/ImageAlice.svg";
+import WhiteRabbit from "../../assets/Imagens/Home/ImageRabbit.svg";
+import CheshireCat from "../../assets/Imagens/Home/ImageCheshireCat.svg";
+import Cheap from "../../assets/Imagens/Home/ImageCheap.svg";
 
-export default function Content() {
+const Content = () => {
   return (
-    <main className="content">
-      <div className="illustrations">
-        <img src={Alice} alt="Alice lendo" className="alice" />
-        <img src={Rabbit} alt="Coelho branco" className="coelho" />
-        <img src={Cheap} alt="Cartas mágicas" className="cartas" />
-        <img src={Cat} alt="Buraco no chão" className="buraco" />
-      </div>
-      <div className="buttons">
-        <button className="btn-secondary">LER LIVRO</button>
-        <button className="btn-secondary">LER SINOPSE</button>
-      </div>
-    </main>
+    <div className="call-to-action">
+    <div className="cta-buttons">
+    <button className="cta-button">LER LIVRO</button>
+    <button className="cta-button">LER SINOPSE</button>
+    </div>
+    
+    <img src={Cheap} alt="Cartas" className="cheap-img" />
+    <img src={Alice} alt="Alice" className="alice-img" />
+    <img src={WhiteRabbit} alt="Coelho Branco" className="white-rabbit-img" />
+    <img src={CheshireCat} alt="Gato de Cheshire" className="cheshire-cat-img" />
+    
+    
+    </div>
   );
-}
+};
+
+export default Content;

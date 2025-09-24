@@ -1,91 +1,208 @@
-body {
+/* Reset e base */
+body, html {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: 'Poppins', sans-serif;
-  background: #fef6e4;
-  color: #333;
 }
 
 .app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* garante que ocupe a tela inteira */
 }
 
-/* HEADER */
+main {
+  flex: 1; /* ocupa espaço e empurra o footer para baixo */
+}
+
+/* Header */
 .header {
-  display: flex;
-  align-items: center;
-  padding: 20px;
+  text-align: center;
+  padding: 20px 0;
 }
 
 .logo {
-  width: 40px;
-  margin-right: 10px;
+  max-width: 250px;
 }
 
-.title {
-  font-size: 1.5rem;
-  color: #b4002d;
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 40px 60px;
+  background-color: #fff;
+  overflow: hidden;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 40px 20px;
-  background: #e6f7ff;
-}
-
-.hero h2 {
-  color: #b4002d;
-  margin-bottom: 15px;
-}
-
-.btn-start {
-  background: #ff3c3c;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-/* CONTENT */
-.content {
+/* Conteúdo do texto */
+.hero-content {
   flex: 1;
-  padding: 40px 20px;
-  text-align: center;
+  max-width: 500px;
 }
 
-.buttons {
-  margin-top: 20px;
+.hero-content h1 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  color: #b3212d; /* vermelho */
+  margin-bottom: 20px;
 }
 
-.btn-secondary {
-  background: #00c4ff;
+.hero-content p {
+  font-size: 1.1rem;
+  color: #b3212d;
+  margin-bottom: 30px;
+}
+
+/* Botão */
+.start-button {
+  background-color: #ff4c4c;
+  color: white;
+  padding: 12px 30px;
   border: none;
-  padding: 12px 20px;
-  margin: 5px;
-  color: white;
+  border-radius: 25px;
   font-weight: bold;
-  border-radius: 6px;
   cursor: pointer;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s;
 }
 
-/* FOOTER */
-.footer {
-  background: #333;
+.start-button:hover {
+  background-color: #e63a3a;
+}
+
+.start-button .arrow {
+  font-size: 1.2rem;
+}
+
+/* Imagem à direita */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+
+/* Content */
+.call-to-action {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#f8f8ff, #ffeabf); /* degrade */
+  overflow: hidden;
+}
+
+/* Centraliza os botões */
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cta-button {
+  background-color: #00BFFF;
   color: white;
-  padding: 30px 20px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Cartas (Cheap) */
+.cheap-img {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 150px;
+  transform: rotate(-15deg);
+}
+
+/* Alice */
+.alice-img {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  width: 180px;
+}
+
+/* Coelho Branco */
+.white-rabbit-img {
+  position: absolute;
+  bottom: 100px;
+  left: 80px;
+  width: 200px;
+}
+
+/* Gato de Cheshire */
+.cheshire-cat-img {
+  position: absolute;
+  bottom: 50px;
+  right: 120px;
+  width: 200px;
+}
+
+/* Footer */
+.footer {
+  background: url("../assets/ImageFooter.svg") no-repeat top center;
+  background-size: cover;
+  padding: 120px 40px 40px; /* espaço em cima pra não sobrepor */
   text-align: center;
+  position: relative;
 }
 
-.footer h4 {
-  margin-bottom: 10px;
+.footer-bg {
+  position: absolute;
+  top: -60px; /* ajusta a altura do svg */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1;
 }
 
-.copy {
-  margin-top: 20px;
-  font-size: 0.8rem;
-  opacity: 0.7;
+.footer-bg img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Conteúdo acima do SVG */
+.footer-cards,
+hr,
+.copyright {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.footer-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer hr {
+  border-color: rgba(255, 255, 255, 0.5);
+  margin: 30px 0;
+}
+
+.copyright {
+  font-size: 0.9em;
 }

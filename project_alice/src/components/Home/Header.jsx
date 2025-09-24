@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
+import '../../styles/Home.css';
+import Logo from "../../assets/LogoMyWordland.svg"; 
 
-
-export default function Header() {
+const Header = () => {
   return (
     <header className="header">
-      <img src="" alt="Logo My Wordland" className="logo" />
-      <h1 className="title">MY WORDLAND</h1>
+      <img src={Logo} alt="My Wordland Logo" className="logo" />
     </header>
   );
-}
+};
+
+export default Header;
