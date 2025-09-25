@@ -1,50 +1,63 @@
 import React from 'react';
-import StepCard from '../components/Tutorial/StepCard';
-
-import img1 from '../assets/Imagens/TutorialPage/imgtest.svg';
-import img2 from '../assets/Imagens/TutorialPage/imgtest.svg';
-import img3 from '../assets/Imagens/TutorialPage/imgtest.svg';
-import img4 from '../assets/Imagens/TutorialPage/imgtest.svg';
-
+import TutorialContainer from '../components/Tutorial/TutorialContainer.jsx';
 import '../styles/TutorialPage.css';
 
-const steps = [
+import Number1 from '../assets/Imagens/TutorialPage/StepOne.svg';
+import Number2 from '../assets/Imagens/TutorialPage/StepTwo.svg';
+import Number3 from '../assets/Imagens/TutorialPage/StepThree.svg';
+import Number4 from '../assets/Imagens/TutorialPage/StepFour.svg';
+import ButtonStart from '../assets/Imagens/TutorialPage/ImageButtonStart.svg';
+import ButtonEnterArrow from '../assets/Imagens/TutorialPage/ImageButtonEntrar.svg';
+
+const tutorialSteps = [
   {
-    img: img1,
-    title: 'Clique no botão de começar',
-    description: 'Clique no botão de começar localizado na página inicial. Ele irá levar você para o começo da sua aventura: a página de Login.',
-    button: { text: 'COMEÇAR >', className: 'start' },
+    id: 1,
+    image: Number1,
+    heading: "Clique no botão de começar",
+    text: "Clique no botão de começar localizado na página inicial. Ele irá levar você para o começo da sua aventura: a página de Login",
+    buttonImage: ButtonStart,
+    isRightAligned: false,
+    headingColor: '#e891bd'
   },
   {
-    img: img2,
-    title: 'Realize o cadastro ou login',
-    description: 'Coloque SEU NOME e UMA SENHA, depois clique no botão de Entrar. Assim você entrará na página de capítulos.',
-    button: { text: 'ENTRAR', className: 'enter' },
+    id: 2,
+    image: Number2,
+    heading: "Realize o cadastro ou login",
+    text: "Coloque SEU NOME E UMA SENHA, depois clique no botão de Entrar. Assim você entrará na página de capítulos.",
+    buttonText: "ENTRAR",
+    buttonImage: ButtonEnterArrow,
+    isRightAligned: true,
+    headingColor: '#6fb4db'
   },
   {
-    img: img3,
-    title: 'Escolha o capítulo de leitura',
-    description: 'Na página de capítulos tem os capítulos do livro da Alice no País das Maravilhas. Leia até o final para receber a surpresa, aprimore sua leitura e aproveite a aventura!',
+    id: 3,
+    image: Number3,
+    heading: "Escolha o capítulo de leitura",
+    text: "Na página de capítulos tem os 10 capítulos do livro da Alice no País das Maravilhas. Leia até o final para receber a surpresa, aprimore sua leitura e aproveite a aventura!",
+    isRightAligned: false,
+    headingColor: '#e891bd'
   },
   {
-    img: img4,
-    title: 'Interaja com os campos e faça o QUIZ',
-    description: 'Pesquise as palavras no campo de DIGITE A PALAVRA e depois informe a quantidade de palavras no campo DIGITE A QUANTIDADE. No final de cada capítulo, realize o QUIZ e ganhe um SELO de superação.',
-  },
+    id: 4,
+    image: Number4,
+    heading: "Interaja com os campos e faça o QUIZ",
+    text: "Pesquise as palavras no campo de: DIGITE A PALAVRA e procure palavras com uma quantidade de letras no campo: DIGITE A QUANTIDADE. No final de cada capítulo, realize o QUIZ e ganhe um SELO de surpresa.",
+    isRightAligned: true,
+    headingColor: '#6fb4db'
+  }
 ];
 
-const TutorialPage = () => {
-  return (
-    <div className="tutorial-container">
-      <h1 className="tutorial-title">TUTORIAL</h1>
-      <p className="tutorial-subtitle">Siga o passo a passo:</p>
-      <div className="steps-grid">
-        {steps.map((step, index) => (
-          <StepCard key={index} {...step} />
-        ))}
-      </div>
-    </div>
-  );
-};
+const TutorialPage = () => (
+  <div className="tutorial-background">
+    <TutorialContainer steps={tutorialSteps} />
+
+    {/* Blobs de fundo */}
+    <div className="blob blob1"></div>
+    <div className="blob blob2"></div>
+    <div className="blob blob3"></div>
+    <div className="blob blob4"></div>
+    <div className="blob blob5"></div>
+  </div>
+);
 
 export default TutorialPage;
