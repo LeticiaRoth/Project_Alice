@@ -61,11 +61,11 @@ const TutorialPage = () => (
     <TutorialContainer steps={tutorialSteps} />
 
     {/* Blobs de fundo (ajustados para a imagem de interrogação) */}
-    <div className="blob blob1" style={{ backgroundImage: `url(${QuestionBlob})` }}></div>
-    <div className="blob blob2" style={{ backgroundImage: `url(${QuestionBlob})` }}></div>
-    <div className="blob blob3" style={{ backgroundImage: `url(${QuestionBlob})` }}></div>
-    <div className="blob blob4" style={{ backgroundImage: `url(${QuestionBlob})` }}></div>
-    <div className="blob blob5" style={{ backgroundImage: `url(${QuestionBlob})` }}></div>
+    <div className="blob blob1"></div>
+    <div className="blob blob2"></div>
+    <div className="blob blob3"></div>
+    <div className="blob blob4"></div>
+    <div className="blob blob5"></div>
   </div>
 );
 
