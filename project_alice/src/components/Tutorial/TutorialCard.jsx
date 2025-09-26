@@ -13,7 +13,7 @@ const TutorialCard = ({ step }) => {
       )}
 
       {/* Conteúdo do card */}
-      <div className={`card-content ${alignmentClass}`}>
+      <div className={`card-content ${alignmentClass}`} style={{ '--card-border-color': step.headingColor, '--card-shadow-color': step.shadowColor }}>
         <h3 className="card-heading" style={{ color: step.headingColor }}>
           {step.heading}
         </h3>
@@ -22,15 +22,17 @@ const TutorialCard = ({ step }) => {
         {/* Botão ou imagem */}
         {(step.buttonImage || step.buttonText) && (
           <div className={`card-button-wrapper ${alignmentClass}`}>
+            {/* Renderiza o botão do passo 1 */}
             {step.buttonImage && !step.buttonText && (
               <img src={step.buttonImage} alt="Botão" className="card-button-image" />
             )}
 
-            {step.buttonText && step.buttonImage && step.id === 2 && (
-              <div className="button-with-arrow">
+            {/* Renderiza o botão com seta do passo 2 */}
+            {step.buttonText && step.id === 2 && (
+              <button className="button-with-arrow">
                 <span className="button-text">{step.buttonText}</span>
                 <img src={step.buttonImage} alt="Seta Entrar" className="button-arrow-image" />
-              </div>
+              </button>
             )}
           </div>
         )}

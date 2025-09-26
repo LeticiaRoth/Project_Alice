@@ -64,8 +64,8 @@
   z-index: 2;
   background-color: white;
   border-radius: 8px;
-  padding: 10px 22px;
-  width: 820px;
+  padding: 20px 62px;
+  width: 880px;
   margin: 30px 0;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -75,15 +75,55 @@
 .tutorial-title { font-size: 65px; font-weight: bold; color: #247299; }
 .tutorial-subtitle { font-size: 40px; color: #164B66; }
 
+.cardWrapper {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin: 40px 0;
+}
+
+.leftAligned { justify-content: flex-start; }
+.rightAligned { justify-content: flex-end; }
+
+/* Número do passo */
+.stepNumberWrapper {
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+}
+.stepNumberWrapper.leftAligned { left: -40px; }
+.stepNumberWrapper.rightAligned { right: -40px; }
+
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #a02b7c;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.5em;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 /* ===== Lista de cards ===== */
-.tutorial-cards-list { display: flex; flex-direction: column; gap: 40px; }
+.tutorial-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 /* ===== Cards ===== */
 .card-wrapper {
   display: flex;
   position: relative;
   width: 100%;
-  flex-wrap: wrap;
 }
 .card-wrapper.left-aligned { justify-content: flex-start; }
 .card-wrapper.right-aligned { justify-content: flex-end; }
@@ -93,26 +133,51 @@
   position: absolute;
   z-index: 10;
 }
-.step-number-wrapper.left-aligned { left: 0; top: 82px; } /* Corrigido "top: 82" -> "82px" */
-.step-number-wrapper.right-aligned { right: 0; }
-.step-number-image { width: 70px; height: auto; }
+.step-number-wrapper.left-aligned {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: -50px;
+}
+.step-number-wrapper.right-aligned {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: -50px;
+}
+.step-number-image { width: 140px; height: auto;}
 
 /* Conteúdo do card */
 .card-content {
   background-color: white;
   border-radius: 20px;
-  padding: 20px 40px;
-  width: 699px;
+  padding: 30px 40px;
+  width: 600px;
   position: relative;
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
-.card-content.left-aligned { text-align: left; padding-left: 20px; padding-right: 40px; border-left: 5px solid #e891bd; }
-.card-content.right-aligned { text-align: right; padding-left: 40px; padding-right: 20px; border-right: 5px solid #6fb4db; }
 
-.card-heading { font-size: 1.2em; margin: 0 0 5px; font-weight: bold; }
-.card-text { font-size: 0.95em; color: #333; margin-bottom: 10px; }
+.card-content.left-aligned {
+  text-align: left;
+  border-left: 8px solid var(--card-border-color);
+}
+.card-content.right-aligned {
+  text-align: right;
+  border-right: 8px solid var(--card-border-color);
+}
+
+.card-heading {
+  font-size: 1.8em;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+.card-text {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 20px;
+}
 
 /* ===== Botões ===== */
 .card-button-wrapper {
@@ -122,19 +187,22 @@
 .card-button-wrapper.left-aligned { justify-content: flex-start; }
 .card-button-wrapper.right-aligned { justify-content: flex-end; }
 
-.card-button-image { height: 35px; width: auto; cursor: pointer; }
+.card-button-image { height: 45px; width: auto; cursor: pointer; }
 
-/* Botão com seta */
+/* Botão com seta (ajustado para ser um elemento <button>) */
 .button-with-arrow {
   display: flex;
   align-items: center;
-  background-color: #6fb4db;
+  justify-content: center;
   color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 8px 15px;
+  border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   text-transform: uppercase;
+  border: none;
+  font-size: 1em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 .button-with-arrow .button-text { margin-right: 10px; }
 .button-arrow-image { height: 18px; width: auto; filter: brightness(0) invert(1); }
