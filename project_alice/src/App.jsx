@@ -1,7 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from "./pages/Home";
 import TutorialPage from './pages/TutorialPage';
-import SeloPage from './pages/PageSelo';
+import SeloPage from "../src/pages/SeloPage";
 
 export default function App() {
   return (

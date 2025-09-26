@@ -1,0 +1,51 @@
+.back-button-container {
+  position: relative;
+  background-color: #923190; 
+  width: 180px;
+  height: 26px;
+  padding: 8px 0;
+  border: 1px solid #6D194C; 
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.back-button-container::before {
+  content: '';
+  position: absolute;
+  left: -23px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right: 40px solid #923190;
+}
+
+/* Borda da ponta da seta */
+.back-button-container::after {
+    content: '';
+    position: absolute;
+    left: -27px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent;
+    border-right: 27px solid #923190; 
+    z-index: -1;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+}

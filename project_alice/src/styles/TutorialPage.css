@@ -1,16 +1,16 @@
 /* ===== Fundo principal ===== */
-.tutorial-background {
+.tutorialBackground {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #076678; /* cor de fundo da página */
+  background-color: #076678; /* NÃO alterar o background da página */
   overflow: hidden;
   padding: 50px 0;
   display: flex;
   justify-content: center;
 }
 
-/* ===== Blobs com efeito líquido ===== */
+/* ===== Blobs animados ===== */
 .blob {
   position: absolute;
   border-radius: 50%;
@@ -18,8 +18,6 @@
   opacity: 0.7;
   animation-timing-function: ease-in-out;
 }
-
-/* Blobs específicos com cores, posições e animações */
 .blob1 { width: 25vw; height: 25vw; background: #ef43d8; top: -5vw; left: -5vw; animation: liquidWave1 8s infinite alternate; }
 .blob2 { width: 25vw; height: 25vw; background: #FD32E2; bottom: -5vw; right: -5vw; animation: liquidWave2 7s infinite alternate; }
 .blob3 { width: 22vw; height: 22vw; background: #ef43d8; top: -3vw; right: -3vw; animation: liquidWave3 6s infinite alternate; }
@@ -27,182 +25,150 @@
 .blob5 { width: 22vw; height: 22vw; background: #ef43d8; bottom: -2vw; left: 50%; transform: translateX(-50%); animation: liquidWaveBottom 6s infinite alternate; }
 
 /* ===== Animações líquidas ===== */
-@keyframes liquidWave1 {
-  0%, 100% { transform: translate(0,0) scale(1); }
-  25% { transform: translate(2%,1%) scale(1.05); }
-  50% { transform: translate(0,2%) scale(1.1); }
-  75% { transform: translate(-2%,1%) scale(1.05); }
-}
-@keyframes liquidWave2 {
-  0%, 100% { transform: translate(0,0) scale(1); }
-  25% { transform: translate(-2%,-1.5%) scale(1.04); }
-  50% { transform: translate(0,-3%) scale(1.08); }
-  75% { transform: translate(2%,-1.5%) scale(1.04); }
-}
-@keyframes liquidWave3 {
-  0%, 100% { transform: translate(0,0) scale(1); }
-  25% { transform: translate(1.5%,1.5%) scale(1.03); }
-  50% { transform: translate(0,3%) scale(1.07); }
-  75% { transform: translate(-1.5%,1.5%) scale(1.03); }
-}
-@keyframes liquidWave4 {
-  0%, 100% { transform: translate(0,0) scale(1); }
-  25% { transform: translate(-1%,-1%) scale(1.02); }
-  50% { transform: translate(0,-2.5%) scale(1.05); }
-  75% { transform: translate(1%,-1%) scale(1.02); }
-}
-@keyframes liquidWaveBottom {
-  0%, 100% { transform: translateX(-50%) translateY(0) scale(1); }
-  25% { transform: translateX(-50%) translateY(-1.5%) scale(1.05); }
-  50% { transform: translateX(-50%) translateY(-3%) scale(1.1); }
-  75% { transform: translateX(-50%) translateY(-1.5%) scale(1.05); }
-}
+@keyframes liquidWave1 { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(2%,1%) scale(1.05);} 50%{transform:translate(0,2%) scale(1.1);} 75%{transform:translate(-2%,1%) scale(1.05);} }
+@keyframes liquidWave2 { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(-2%,-1.5%) scale(1.04);} 50%{transform:translate(0,-3%) scale(1.08);} 75%{transform:translate(2%,-1.5%) scale(1.04);} }
+@keyframes liquidWave3 { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(1.5%,1.5%) scale(1.03);} 50%{transform:translate(0,3%) scale(1.07);} 75%{transform:translate(-1.5%,1.5%) scale(1.03);} }
+@keyframes liquidWave4 { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(-1%,-1%) scale(1.02);} 50%{transform:translate(0,-2.5%) scale(1.05);} 75%{transform:translate(1%,-1%) scale(1.02);} }
+@keyframes liquidWaveBottom { 0%,100%{transform:translateX(-50%) translateY(0) scale(1);} 25%{transform:translateX(-50%) translateY(-1.5%) scale(1.05);} 50%{transform:translateX(-50%) translateY(-3%) scale(1.1);} 75%{transform:translateX(-50%) translateY(-1.5%) scale(1.05);} }
 
-/* ===== Container do Tutorial (fundo branco) ===== */
-.tutorial-container {
+/* ===== Container principal ===== */
+.tutorialContainer {
   position: relative;
   z-index: 2;
-  background-color: white;
-  border-radius: 8px;
-  padding: 20px 62px;
-  width: 880px;
+  background-color: #FBFEFF;
+  border-radius: 40px;
+  padding: 10px 62px 90px 62px;
+  width: 840px;
   margin: 30px 0;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 /* ===== Títulos ===== */
-.tutorial-title { font-size: 65px; font-weight: bold; color: #247299; }
-.tutorial-subtitle { font-size: 40px; color: #164B66; }
+.tutorialTitle { font-size: 65px; font-weight: bold; color: #247299; margin-bottom: 10px; text-transform: uppercase;}
+.tutorialSubtitle { font-size: 30px; color: #164B66; margin-bottom: 60px; }
 
-.cardWrapper {
+/* ===== Lista de cards ===== */
+.tutorialCardsList {
   display: flex;
-  width: 100%;
-  position: relative;
-  margin: 40px 0;
+  flex-direction: column;
+  gap: 60px;
 }
 
-.leftAligned { justify-content: flex-start; }
-.rightAligned { justify-content: flex-end; }
+/* ===== Card ===== */
+.cardWrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.cardWrapper.leftAligned { justify-content: flex-start; padding-left: 30px;}
+.cardWrapper.rightAligned { justify-content: flex-end; padding-right: 30px;}
 
 /* Número do passo */
 .stepNumberWrapper {
   position: absolute;
-  z-index: 10;
-  top: 20px;
-}
-.stepNumberWrapper.leftAligned { left: -40px; }
-.stepNumberWrapper.rightAligned { right: -40px; }
-
-.stepNumber {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 70px;
-  height: 70px;
-  background-color: #a02b7c;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 1.5em;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* ===== Lista de cards ===== */
-.tutorial-cards-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* ===== Cards ===== */
-.card-wrapper {
-  display: flex;
-  position: relative;
-  width: 100%;
-}
-.card-wrapper.left-aligned { justify-content: flex-start; }
-.card-wrapper.right-aligned { justify-content: flex-end; }
-
-/* Número do passo */
-.step-number-wrapper {
-  position: absolute;
+  top: 16%;
+  transform: translateY(-50%);
   z-index: 10;
 }
-.step-number-wrapper.left-aligned {
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-left: -50px;
-}
-.step-number-wrapper.right-aligned {
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-right: -50px;
-}
-.step-number-image { width: 140px; height: auto;}
 
-/* Conteúdo do card */
-.card-content {
+.cardWrapper.rightAligned .cardHeading {
+  padding-right: 30px;
+}
+
+.cardWrapper.leftAligned .cardHeading {
+  padding-left: 85px;
+}
+
+.cardWrapper.cardWrapper.leftAligned .cardText {
+  padding-left: 85px;
+} 
+
+.cardWrapper.cardWrapper.rightAligned .cardText {
+  padding-right: 30px;
+} 
+
+.stepNumberWrapper.leftAligned { left: -8px; }
+.stepNumberWrapper.rightAligned { right: -8px; }
+.stepNumberImage { width: 142px; height: auto; }
+
+/* Conteúdo */
+.cardContent {
   background-color: white;
   border-radius: 20px;
-  padding: 30px 40px;
-  width: 600px;
+  padding: 0 30px;
+  width: 640px;
   position: relative;
-  font-family: Arial, sans-serif;
   line-height: 1.5;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-}
-
-.card-content.left-aligned {
+  box-shadow: 0 8px 20px var(--card-shadow-color);
   text-align: left;
-  border-left: 8px solid var(--card-border-color);
-}
-.card-content.right-aligned {
-  text-align: right;
-  border-right: 8px solid var(--card-border-color);
 }
 
-.card-heading {
-  font-size: 1.8em;
-  margin: 0 0 10px;
+.cardContent.rightAligned {
+  border-left: none;
+  text-align: left;
+}
+
+.cardHeading {
+  font-size: 30px;
+  margin-bottom: -5px;
   font-weight: bold;
 }
-.card-text {
-  font-size: 1em;
-  color: #333;
+
+.cardText {
+  font-size: 20px;
+  color: rgb(17, 17, 16, 74%);
   margin-bottom: 20px;
+  width: 500px;
 }
 
 /* ===== Botões ===== */
-.card-button-wrapper {
-  margin-top: 15px;
+.cardButtonWrapper {
   display: flex;
 }
-.card-button-wrapper.left-aligned { justify-content: flex-start; }
-.card-button-wrapper.right-aligned { justify-content: flex-end; }
 
-.card-button-image { height: 45px; width: auto; cursor: pointer; }
+.cardButtonWrapper.leftAligned { justify-content: flex-start; }
+.cardButtonWrapper.rightAligned { justify-content: flex-end; }
 
-/* Botão com seta (ajustado para ser um elemento <button>) */
-.button-with-arrow {
+.cardButtonImage { height: 45px; width: auto; cursor: pointer; }
+
+.buttonWithArrow {
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  padding: 8px 15px;
-  border-radius: 8px;
+  background: #5DB65D;
+  padding: 10px 20px;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
-  text-transform: uppercase;
   border: none;
   font-size: 1em;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-.button-with-arrow .button-text { margin-right: 10px; }
-.button-arrow-image { height: 18px; width: auto; filter: brightness(0) invert(1); }
+.buttonWithArrow .buttonText { margin-right: 10px; }
+.buttonArrowImage { height: 18px; width: auto; filter: brightness(0) invert(1); }
+
+
+/* Imagens dos pontos de interrogação */
+.questionMark {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none; 
+  opacity: 0.9;
+}
+
+.questionMarkTop {
+  top: -70px;   
+  right: -6px; 
+  width: 185px; 
+  opacity: 100%;
+}
+
+.questionMarkBottom {
+  bottom: -86px; 
+  left: -80px;  
+  width: 280px;
+  opacity: 100%;
+}
