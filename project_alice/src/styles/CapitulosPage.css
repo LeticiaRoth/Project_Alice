@@ -1,0 +1,121 @@
+/* ======= Cards ======= */
+.chapterCard {
+  position: relative;
+  width: 200px;
+  height: 160px;
+  border: 2px solid;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-size: cover;
+  background-position: center;
+}
+
+.chapterImage {
+  position: absolute;
+  top: -65px;
+  left: -30px;
+  width: 100px;
+  height: auto;
+  pointer-events: none;
+}
+
+.chapterTitle {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.chapterSubtitle {
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.chapterDescription {
+  font-size: 12px;
+  color: #555;
+}
+
+.chapterButton {
+  margin-top: 10px;
+  padding: 5px 12px;
+  background-color: var(--button-color, #f06292);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.3s ease;
+}
+
+.chapterButton:hover {
+  opacity: 0.9;
+}
+
+/* ======= Página ======= */
+.chaptersPage {
+  min-height: 100vh;
+  background-color: #f7fff9;
+  padding: 20px;
+  position: relative; /* necessário p/ posicionar decorativos */
+  overflow: hidden;
+}
+
+.chaptersHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.chaptersHeader h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #285217;
+}
+
+.chaptersHeader p {
+  font-size: 18px;
+  color: #447132;
+}
+
+.chaptersGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  justify-items: center;
+}
+
+/* ======= Xícaras ======= */
+.cupDecoration {
+  position: absolute;
+  width: 55px;
+  opacity: 0.95;
+}
+
+.cup1 { top: 80px; left: 30px; transform: rotate(-15deg); }
+.cup2 { top: 80px; right: 40px; transform: rotate(20deg); }
+.cup3 { top: 280px; right: 20px; transform: rotate(-25deg); }
+.cup4 { top: 380px; left: 40px; transform: rotate(30deg); }
+.cup5 { bottom: 100px; left: 50px; transform: rotate(-20deg); }
+.cup6 { bottom: 70px; right: 70px; transform: rotate(15deg); }
+
+/* ======= Outras decorações ======= */
+.decor {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* penas */
+.decorFeather1 { top: 250px; right: 90px; width: 65px; transform: rotate(15deg); }
+.decorFeather2 { bottom: 180px; left: 100px; width: 65px; transform: rotate(-25deg); }
+
+/* chapéu */
+.decorHat { bottom: 250px; left: 70px; width: 80px; transform: rotate(-10deg); }
+
+/* sapato */
+.decorShoe { bottom: 140px; right: 120px; width: 75px; transform: rotate(15deg); }
+
+/* pontos de interrogação */
+.decorQuestion1 { top: 200px; left: 220px; width: 70px; }
+.decorQuestion2 { top: 200px; right: 220px; width: 70px; }
