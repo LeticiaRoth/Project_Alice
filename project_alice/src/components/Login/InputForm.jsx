@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import InputForm from "../../components/InputForm";
-import "../../styles/Login.css";
+import '../../styles/Login.css';
 
 const LoginForm = () => {
     const [formData, setFormData] = useState({

@@ -1,7 +1,7 @@
 import React from "react";
 // import ErrorIcon from "../assets/error.svg"; // Ícone de erro vermelho
 
-import "../../styles/Login.css";
+import "../styles/Login.css";
 
 const LoginInput = ({ label, type, name, placeholder, value, onChange, error }) => {
   return (
