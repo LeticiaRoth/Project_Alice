@@ -1,0 +1,181 @@
+/* Estilização da página */
+.loginPage {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #85ccf6, #3E9ECF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox {
+    width: 1055px;
+    height: 643px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    
+}
+
+.loginTitle {
+    font-size: 65px;
+    font-weight: bold;
+    color: #1D7CA8;
+    margin-bottom: 40px;
+}
+
+/* Imagens decorativas */
+.decor {
+    position: absolute;
+    z-index: 1;
+}
+
+.hat {
+    width: 260px;
+    top: 2px;
+    left: 210px;
+    z-index: 10;
+}
+
+.clock {
+    top: 1px;
+    right: 230px;
+    width: 250px;
+    z-index: 10;
+}
+
+.key {
+    bottom: 50px;
+    left: 290px;
+    width: 150px;
+    z-index: 10;
+    
+}
+
+.teapot {
+    bottom: 22px;
+    right: 200px;
+    width: 310px;
+    z-index: 10;
+}
+
+/* Estilização dos formulários */
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputField {
+    text-align: left;
+}
+
+.label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #B2362D; 
+    margin-bottom: 5px;
+    display: block;
+}
+
+.errorLabel {
+    color: #b22222;
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.input {
+    width: 535px;
+    height: auto;
+    padding: 20px 10px;
+    border: 2px solid #9A9A9A;
+    border-radius: 10px;
+    outline: none;
+    font-size: 22px;
+    color: #111110;
+    background-color: #F1F1F1;
+}
+
+.input:focus {
+    border-color: #297ab1;
+}
+
+.errorInput {
+    border-color: #b22222;
+}
+
+.errorIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+}
+
+.firstTime {
+    font-size: 20px;
+    color: #545758;
+    text-align: center;
+    font-weight: bold;
+}
+
+.firstTime a {
+    color: #901B8E;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1.4px;
+}
+
+/* ==== Botão em formato de seta ==== */
+.loginButton {
+    background: #669554;
+    border: 1px solid #185A38;
+    color: #ffffff;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 14px 40px;
+    text-align: center;
+    position: relative;
+    align-self: center;
+    
+    /* Forma de seta para a esquerda (default) */
+    clip-path: polygon(
+    20% 0%,   /* ponta esquerda em cima */
+    0% 50%,   /* bico da seta esquerda */
+    20% 100%, /* ponta esquerda embaixo */
+    100% 100%,/* canto inferior direito */
+    100% 0%   /* canto superior direito */
+    );
+    
+    transition: clip-path 0.3s ease-in-out, background 0.3s;
+}
+
+.loginButton:hover {
+    background: #669554;
+    
+    /* Muda seta para a direita */
+    clip-path: polygon(
+    0% 0%,     /* canto superior esquerdo */
+    80% 0%,    /* ponta direita em cima */
+    100% 50%,  /* bico da seta direita */
+    80% 100%,  /* ponta direita embaixo */
+    0% 100%    /* canto inferior esquerdo */
+    );
+}

@@ -1,0 +1,51 @@
+.registerPage {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #a52424, #5c1010);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.registerBox {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.registerTitle {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7a0d0d;
+  margin-bottom: 20px;
+}
+
+/* Imagens decorativas */
+.decor {
+  position: absolute;
+  z-index: 1;
+}
+
+.crown {
+  top: 30px;
+  right: 40px;
+  width: 120px;
+}
+
+.cards {
+  bottom: 20px;
+  right: 30px;
+  width: 130px;
+}
+
+.soldier {
+  bottom: 0;
+  left: 0;
+  width: 150px;
+}
