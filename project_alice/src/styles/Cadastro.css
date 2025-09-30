@@ -1,51 +1,146 @@
-.registerPage {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(to bottom right, #a52424, #5c1010);
+/* Fundo vermelho */
+.registerBackground {
+  background: linear-gradient(to bottom, #7a0c0c, #b21e1e);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-}
-
-.registerBox {
-  background: white;
-  padding: 40px 60px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   position: relative;
-  z-index: 2;
+}
+
+/* Card central */
+.formContainer {
+  background: #fff;
+  padding: 40px 60px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
   text-align: center;
-}
-
-.registerTitle {
-  font-size: 28px;
-  font-weight: bold;
-  color: #7a0d0d;
-  margin-bottom: 20px;
-}
-
-/* Imagens decorativas */
-.decor {
-  position: absolute;
+  width: 400px;
+  position: relative;
   z-index: 1;
 }
 
-.crown {
-  top: 30px;
-  right: 40px;
-  width: 120px;
+.containerTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #5a0c0c;
+  margin-bottom: 25px;
+  font-family: 'Georgia', serif;
 }
 
-.cards {
-  bottom: 20px;
-  right: 30px;
-  width: 130px;
+/* Inputs */
+.inputGroup {
+  text-align: left;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.inputGroup label {
+  font-weight: bold;
+  color: #1b1b1b;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.errorLabel {
+  color: #0073e6; /* azul quando erro (igual ao print) */
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+.inputError {
+  border: 2px solid #0073e6; /* borda azul */
+}
+
+.errorIcon {
+  position: absolute;
+  right: 10px;
+  top: 37px;
+  color: #0073e6;
+  font-weight: bold;
+}
+.arrowButton {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Forma da seta */
+.arrowShape {
+  display: inline-block;
+  background: #2e6d3c;
+  clip-path: polygon(
+    20% 0%,
+    100% 0%,
+    100% 100%,
+    20% 100%,
+    0% 50%
+  );
+  width: 160px;
+  height: 60px;
+  transition: transform 0.4s ease, background 0.3s ease;
+  position: absolute;
+  z-index: 0;
+}
+
+/* Texto dentro da seta */
+.arrowText {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Hover → só a seta gira */
+.arrowButton:hover .arrowShape {
+  background: #24532c;
+  transform: rotate(180deg);
+}
+
+/* Ícones decorativos */
+.icon {
+  position: absolute;
 }
 
 .soldier {
-  bottom: 0;
-  left: 0;
-  width: 150px;
+  bottom: 20px;
+  left: 20px;
+  width: 120px;
+}
+
+.crown {
+  top: 20px;
+  right: 40px;
+  width: 90px;
+}
+
+/* cartas espalhadas */
+.card1 {
+  top: 20px;
+  left: 20px;
+  width: 60px;
+}
+
+.card2 {
+  top: 100px;
+  left: 80px;
+  width: 50px;
+}
+
+.card3 {
+  bottom: 30px;
+  right: 50px;
+  width: 55px;
 }
