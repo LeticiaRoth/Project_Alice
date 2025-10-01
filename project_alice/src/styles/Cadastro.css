@@ -1,112 +1,19 @@
-/* Fundo vermelho */
+/* Register.css */
 .registerBackground {
-  background: linear-gradient(to bottom, #7a0c0c, #b21e1e);
+  background: linear-gradient(135deg, #7b0f1c, #9b1c2d);
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
-/* Card central */
-.formContainer {
-  background: #fff;
-  padding: 40px 60px;
-  border-radius: 8px;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-  text-align: center;
-  width: 400px;
-  position: relative;
-  z-index: 1;
-}
-
-.containerTitle {
+.registerTitle {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #5a0c0c;
+  color: #6b0000;
   margin-bottom: 25px;
-  font-family: 'Georgia', serif;
-}
-
-/* Inputs */
-.inputGroup {
-  text-align: left;
-  margin-bottom: 18px;
-  position: relative;
-}
-
-.inputGroup label {
-  font-weight: bold;
-  color: #1b1b1b;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.errorLabel {
-  color: #0073e6; /* azul quando erro (igual ao print) */
-}
-
-.inputGroup input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-}
-
-.inputError {
-  border: 2px solid #0073e6; /* borda azul */
-}
-
-.errorIcon {
-  position: absolute;
-  right: 10px;
-  top: 37px;
-  color: #0073e6;
-  font-weight: bold;
-}
-.arrowButton {
-  position: relative;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Forma da seta */
-.arrowShape {
-  display: inline-block;
-  background: #2e6d3c;
-  clip-path: polygon(
-    20% 0%,
-    100% 0%,
-    100% 100%,
-    20% 100%,
-    0% 50%
-  );
-  width: 160px;
-  height: 60px;
-  transition: transform 0.4s ease, background 0.3s ease;
-  position: absolute;
-  z-index: 0;
-}
-
-/* Texto dentro da seta */
-.arrowText {
-  position: relative;
-  z-index: 1;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-/* Hover → só a seta gira */
-.arrowButton:hover .arrowShape {
-  background: #24532c;
-  transform: rotate(180deg);
 }
 
 /* Ícones decorativos */
@@ -114,33 +21,18 @@
   position: absolute;
 }
 
-.soldier {
-  bottom: 20px;
-  left: 20px;
-  width: 120px;
+.cardIcon {
+  width: 80px;
 }
 
 .crown {
-  top: 20px;
-  right: 40px;
-  width: 90px;
+  top: 40px;
+  right: 60px;
+  width: 120px;
 }
 
-/* cartas espalhadas */
-.card1 {
-  top: 20px;
-  left: 20px;
-  width: 60px;
-}
-
-.card2 {
-  top: 100px;
-  left: 80px;
-  width: 50px;
-}
-
-.card3 {
-  bottom: 30px;
-  right: 50px;
-  width: 55px;
+.spear {
+  bottom: 100px;
+  left: 40px;
+  width: 260px;
 }

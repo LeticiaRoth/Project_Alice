@@ -10,22 +10,22 @@ import CheriseCat from '../../assets/Imagens/Home/ImageCheshireCat.svg';
 
 const Content = () => {
   return (
-    <div className="call-to-action">
+    <div className="callToAction">
     {/* Botões centrais */}
-    <div className="cta-buttons">
-    <button className="cta-button">Ler livro</button>
-    <button className="cta-button">Ler sinopse</button>
+    <div className="ctaButtons">
+    <button className="ctaButton">Ler livro</button>
+    <button className="ctaButton">Ler sinopse</button>
     </div>
     
     {/* Imagens decorativas */}
-    <img src={Cheap} alt="Cartas" className="cheap-img" />
-    <img src={Alice} alt="Alice" className="alice-img" />
-    <img src={WhiteRabbit} alt="Coelho Branco" className="white-rabbit-img" />
+    <img src={Cheap} alt="Cartas" className="cheapImg" />
+    <img src={Alice} alt="Alice" className="aliceImg" />
+    <img src={WhiteRabbit} alt="Coelho Branco" className="whiteRabbitImg" />
     
     {/* Cheshire Cat + efeito */}
-    <div className="cheshire-cat-wrapper">
-    <div className="cheshire-bg"></div>
-    <img src={CheriseCat} alt="Cheshire Cat" className="cheshire-cat-img" />
+    <div className="cheshireCatWrapper">
+    <div className="cheshireBg"></div>
+    <img src={CheriseCat} alt="Cheshire Cat" className="cheshireCatImg" />
     </div>
     
     </div>

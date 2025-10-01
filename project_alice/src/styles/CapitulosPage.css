@@ -100,7 +100,6 @@
 .cup5 { bottom: 100px; left: 50px; transform: rotate(-20deg); }
 .cup6 { bottom: 70px; right: 70px; transform: rotate(15deg); }
 
-/* ======= Outras decorações ======= */
 .decor {
   position: absolute;
   pointer-events: none;

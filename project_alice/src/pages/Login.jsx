@@ -4,32 +4,48 @@ import Button from "../components/Login-Cadastro/Button";
 import ContainerForm from "../components/Login-Cadastro/ContainerForm";
 import TextLink from "../components/Login-Cadastro/TextLink";
 
-import ChapeuChapeleiro from "../assets/Imagens/Login/ChapeuChapeleiro.svg";
-import Relogio from "../assets/Imagens/Login/Relogio.svg";
-import Chave from "../assets/Imagens/Login/Chave.svg";
-import BuleCha from "../assets/Imagens/Login/BuleCha.svg";
+import ChapeuChapeleiro from "../assets/imagens/login/chapeuChapeleiro.svg";
+import Relogio from "../assets/imagens/login/relogio.svg";
+import Chave from "../assets/imagens/login/chave.svg";
+import BuleCha from "../assets/imagens/login/buleCha.svg";
 
 import "../styles/Login.css";
 
 export default function Login() {
   return (
     <div className="loginBackground">
-      {/* Ícones */}
-      <img src={ChapeuChapeleiro} alt="Hat" className="icon hat" />
-      <img src={Relogio} alt="Clock" className="icon clock" />
-      <img src={Chave} alt="Key" className="icon key" />
-      <img src={BuleCha} alt="Teapot" className="icon teapot" />
-
-      {/* Card */}
+      {/* Card com ícones dentro */}
       <ContainerForm>
+        {/* Ícones decorativos */}
+        <img src={ChapeuChapeleiro} alt="Hat" className="icon hat" />
+        <img src={Relogio} alt="Clock" className="icon clock" />
+        <img src={Chave} alt="Key" className="icon key" />
+        <img src={BuleCha} alt="Teapot" className="icon teapot" />
+
         <h2 className="loginTitle">LOGIN</h2>
 
-        <InputField label="Seu nome:" type="text" placeholder="Exemplo: Miguel" required />
-        <InputField label="Sua senha:" type="password" placeholder="Exemplo: 123miguel"/>
+        <InputField 
+          label="Seu nome:" 
+          type="text" 
+          placeholder="Exemplo: Miguel" 
+          required 
+        />
 
-        <TextLink text="Sua primeira vez lendo o livro?" to="/register" />
+        <InputField 
+          label="Sua senha:" 
+          type="password" 
+          placeholder="Exemplo: 123miguel" 
+        />
 
-        <Button text="ENTRAR" onClick={() => alert("Login clicado")} />
+        <TextLink 
+          text="Sua primeira vez lendo o livro?" 
+          to="/register" 
+        />
+
+        <Button 
+          text="ENTRAR" 
+          onClick={() => alert("Login clicado")} 
+        />
       </ContainerForm>
     </div>
   );
