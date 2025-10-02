@@ -1,16 +1,23 @@
-/* ===== Fundo principal ===== */
+/* Reset e base */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* fundo principal da tela */
 .tutorialBackground {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #076678; /* NÃO alterar o background da página */
+  background-color: #076678;
   overflow: hidden;
   padding: 50px 0;
   display: flex;
   justify-content: center;
 }
 
-/* ===== Blobs animados ===== */
+/* blobs animados ao fundo */
 .blob {
   position: absolute;
   border-radius: 50%;
@@ -24,38 +31,38 @@
 .blob4 { width: 18vw; height: 18vw; background: #FD32E2; bottom: -3vw; left: -3vw; animation: liquidWave4 9s infinite alternate; }
 .blob5 { width: 22vw; height: 22vw; background: #ef43d8; bottom: -2vw; left: 50%; transform: translateX(-50%); animation: liquidWaveBottom 6s infinite alternate; }
 
-/* ===== Animações líquidas ===== */
+/* animações com efeitos de 'líquido' */
 @keyframes liquidWave1 { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(2%,1%) scale(1.05);} 50%{transform:translate(0,2%) scale(1.1);} 75%{transform:translate(-2%,1%) scale(1.05);} }
 @keyframes liquidWave2 { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(-2%,-1.5%) scale(1.04);} 50%{transform:translate(0,-3%) scale(1.08);} 75%{transform:translate(2%,-1.5%) scale(1.04);} }
 @keyframes liquidWave3 { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(1.5%,1.5%) scale(1.03);} 50%{transform:translate(0,3%) scale(1.07);} 75%{transform:translate(-1.5%,1.5%) scale(1.03);} }
 @keyframes liquidWave4 { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(-1%,-1%) scale(1.02);} 50%{transform:translate(0,-2.5%) scale(1.05);} 75%{transform:translate(1%,-1%) scale(1.02);} }
 @keyframes liquidWaveBottom { 0%,100%{transform:translateX(-50%) translateY(0) scale(1);} 25%{transform:translateX(-50%) translateY(-1.5%) scale(1.05);} 50%{transform:translateX(-50%) translateY(-3%) scale(1.1);} 75%{transform:translateX(-50%) translateY(-1.5%) scale(1.05);} }
 
-/* ===== Container principal ===== */
+/* container principal */
 .tutorialContainer {
   position: relative;
   z-index: 2;
   background-color: #FBFEFF;
-  border-radius: 40px;
-  padding: 10px 62px 90px 62px;
+  border-radius: 20px;
+  padding: 10px 70px 0 70px;
   width: 840px;
-  margin: 30px 0;
+  margin: 0 auto;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* ===== Títulos ===== */
+/* títulos */
 .tutorialTitle { font-size: 65px; font-weight: bold; color: #247299; margin-bottom: 10px; text-transform: uppercase;}
 .tutorialSubtitle { font-size: 30px; color: #164B66; margin-bottom: 60px; }
 
-/* ===== Lista de cards ===== */
+/* listas dos cards */
 .tutorialCardsList {
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
 
-/* ===== Card ===== */
+/* card */
 .cardWrapper {
   display: flex;
   position: relative;
@@ -65,7 +72,7 @@
 .cardWrapper.leftAligned { justify-content: flex-start; padding-left: 30px;}
 .cardWrapper.rightAligned { justify-content: flex-end; padding-right: 30px;}
 
-/* Número do passo */
+/* números do passo a passo */
 .stepNumberWrapper {
   position: absolute;
   top: 16%;
@@ -93,7 +100,7 @@
 .stepNumberWrapper.rightAligned { right: -8px; }
 .stepNumberImage { width: 142px; height: auto; }
 
-/* Conteúdo */
+/* conteúdo do card */
 .cardContent {
   background-color: white;
   border-radius: 20px;
@@ -123,20 +130,20 @@
   width: 500px;
 }
 
-/* ===== Botões ===== */
-.cardButtonWrapper {
-  display: flex;
+/* imgens dos botões 'Começar' e 'Entrar'*/
+.buttonCard {
+  max-height: 90px;
+  max-width: 290px;
+  cursor: pointer;
+  margin-left: 25rem;
+  margin-bottom: 20px;
 }
 
-.cardButtonWrapper.leftAligned { justify-content: flex-start; }
-.cardButtonWrapper.rightAligned { justify-content: flex-end; }
-
-.cardButtonImage { height: 45px; width: auto; cursor: pointer; }
-
-.buttonWithArrow {
+.buttonEntrar {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   color: white;
   background: #5DB65D;
   padding: 10px 20px;
@@ -146,29 +153,36 @@
   border: none;
   font-size: 1em;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease-in-out;
 }
-.buttonWithArrow .buttonText { margin-right: 10px; }
-.buttonArrowImage { height: 18px; width: auto; filter: brightness(0) invert(1); }
 
+.buttonEntrar .buttonText {
+  margin-right: 4px;
+}
+.imageButtonEntrar {
+  height: 18px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
 
-/* Imagens dos pontos de interrogação */
+/* imagens dos pontos de interrogação */
 .questionMark {
   position: absolute;
-  z-index: 1;
-  pointer-events: none; 
+  z-index: 0; 
+  pointer-events: none;
   opacity: 0.9;
 }
 
 .questionMarkTop {
-  top: -70px;   
-  right: -6px; 
-  width: 185px; 
-  opacity: 100%;
+  top: -50px;     
+  right: 5px;
+  width: 180px;
+  opacity: 1;
 }
 
 .questionMarkBottom {
-  bottom: -86px; 
-  left: -80px;  
+  bottom: -60px;   
+  left: -85px;
   width: 280px;
-  opacity: 100%;
+  opacity: 1;
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import InputField from "../components/Login-Cadastro/InputField";
-import Button from "../components/Login-Cadastro/Button";
 import ContainerForm from "../components/Login-Cadastro/ContainerForm";
 import TextLink from "../components/Login-Cadastro/TextLink";
 
@@ -9,6 +8,9 @@ import Relogio from "../assets/imagens/login/relogio.svg";
 import Chave from "../assets/imagens/login/chave.svg";
 import BuleCha from "../assets/imagens/login/buleCha.svg";
 
+
+// importando botão 'Entrar'
+import ArrowButton from '../components/Login-Cadastro/ArrowButton';
 import "../styles/Login.css";
 
 export default function Login() {
@@ -17,17 +19,17 @@ export default function Login() {
       {/* Card com ícones dentro */}
       <ContainerForm>
         {/* Ícones decorativos */}
-        <img src={ChapeuChapeleiro} alt="Hat" className="icon hat" />
-        <img src={Relogio} alt="Clock" className="icon clock" />
-        <img src={Chave} alt="Key" className="icon key" />
-        <img src={BuleCha} alt="Teapot" className="icon teapot" />
+        <img src={ChapeuChapeleiro} alt="Hat" className="iconsContainer chapeuChapeleiro" />
+        <img src={Relogio} alt="Clock" className="iconsContainer relogio" />
+        <img src={Chave} alt="Key" className="iconsContainer chaves" />
+        <img src={BuleCha} alt="Teapot" className="iconsContainer buleCha" />
 
         <h2 className="loginTitle">LOGIN</h2>
 
         <InputField 
-          label="Seu nome:" 
+          label="Seu nome ou username:" 
           type="text" 
-          placeholder="Exemplo: Miguel" 
+          placeholder="Exemplo: MiguelMendes234" 
           required 
         />
 
@@ -42,8 +44,8 @@ export default function Login() {
           to="/register" 
         />
 
-        <Button 
-          text="ENTRAR" 
+        <ArrowButton 
+          text="Entrar" 
           onClick={() => alert("Login clicado")} 
         />
       </ContainerForm>

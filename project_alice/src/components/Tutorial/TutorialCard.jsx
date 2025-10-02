@@ -5,14 +5,19 @@ const TutorialCard = ({ step }) => {
 
   return (
     <div className={`cardWrapper ${alignmentClass}`}>
-      {/* Número do passo */}
+      
+      {/* número indicando o passo a passo */}
       {step.image && (
         <div className={`stepNumberWrapper ${alignmentClass}`}>
-          <img src={step.image} alt={`Passo ${step.id}`} className="stepNumberImage" />
+          <img
+            src={step.image}
+            alt={`Passo ${step.id}`}
+            className="stepNumberImage"
+          />
         </div>
       )}
 
-      {/* Conteúdo do card */}
+      {/* card */}
       <div
         className={`cardContent ${alignmentClass}`}
         style={{
@@ -25,27 +30,29 @@ const TutorialCard = ({ step }) => {
         </h3>
         <p className="cardText">{step.text}</p>
 
-        {/* Botão ou imagem */}
-        {(step.buttonImage || step.buttonText) && (
+        {/* imagens dos botões */}
+        {step.buttonImage || step.buttonText ? (
           <div className={`cardButtonWrapper ${alignmentClass}`}>
-            {/* Botão imagem (passo 1) */}
-            {step.buttonImage && !step.buttonText && (
-              <img src={step.buttonImage} alt="Botão" className="cardButtonImage" />
-            )}
-
-            {/* Botão com seta (passo 2) */}
-            {step.buttonText && step.id === 2 && (
-              <button className="buttonWithArrow">
+            {step.buttonText ? (
+              <button className="buttonEntrar">
                 <span className="buttonText">{step.buttonText}</span>
-                <img
-                  src={step.buttonImage}
-                  alt="Seta Entrar"
-                  className="buttonArrowImage"
-                />
+                {step.buttonImage && (
+                  <img
+                    src={step.buttonImage}
+                    alt="Ícone botão"
+                    className="imageButtonEntrar"
+                  />
+                )}
               </button>
+            ) : (
+              <img
+                src={step.buttonImage}
+                alt="Botão"
+                className="buttonCard"
+              />
             )}
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );

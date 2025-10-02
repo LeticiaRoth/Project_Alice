@@ -1,5 +1,12 @@
+/* Reset e base */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 /* Register.css */
-.registerBackground {
+.cadastroBackground {
   background: linear-gradient(135deg, #7b0f1c, #9b1c2d);
   height: 100vh;
   display: flex;
@@ -9,30 +16,106 @@
   overflow: hidden;
 }
 
-.registerTitle {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #6b0000;
-  margin-bottom: 25px;
+/* blur do canto superior esquerdo */
+.cadastroBackground::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 500px;
+  height: 300px;
+  background: radial-gradient(circle, #8B1923 0%, transparent 70%);
+  filter: blur(40px);
+  border-radius: 50%;
 }
 
-/* Ícones decorativos */
-.icon {
+/* blur do canto inferior direito */
+.cadastroBackground::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: -100px;
+  width: 500px;
+  height: auto;
+  background: radial-gradient(circle, #8B1923 0%, transparent 50%);
+  filter: blur(40px);
+  border-radius: 50%;
+}
+
+.cadastroTitle {
+  font-size: 65px;
+  font-weight: bold;
+  color: #621717;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* ícones/imagens decorativas ao redor do container */
+.iconsContainer {
   position: absolute;
 }
 
-.cardIcon {
-  width: 80px;
+.coroaRainha {
+  top: -120px;
+  right: -180px;
+  width: 280px;
+  z-index: 10;
 }
 
-.crown {
-  top: 40px;
-  right: 60px;
-  width: 120px;
+.valleteCopas {
+  bottom: -120px;
+  left: -300px;
+  width: 420px;
+  z-index: 10;
 }
 
-.spear {
-  bottom: 100px;
-  left: 40px;
-  width: 260px;
+.cheapCartaTop {
+  top: -120px;
+  left: -300px;
+  width: 470px;
+  z-index: 10;
+}
+
+.cheapCartaBottom {
+  bottom: -120px;
+  right: -300px;
+  width: 400px;
+  z-index: 10;
+}
+
+/* Inputs */
+.inputGroup {
+  text-align: left;
+  margin-bottom: 18px;
+  position: relative;
+  
+}
+
+.inputGroup label {
+  font-weight: bold;
+  font-size: 24px;
+  color: #25759F;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.inputGroup input {
+  margin-bottom: 10px;
+  width: 525px;
+  height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #9A9A9A;
+  border-radius: 10px;
+  background-color: #F1F1F1;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.inputGroup input:active {
+  border: 1px solid #767474;
+}
+
+.inputGroup ::placeholder{
+  font-size: 20px;
+  color: #646462;
 }

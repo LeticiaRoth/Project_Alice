@@ -1,26 +1,26 @@
 import React from "react";
 import InputField from "../components/Login-Cadastro/InputField";
-import Button from "../components/Login-Cadastro/Button";
+import ArrowButton from '../components/Login-Cadastro/ArrowButton';
 import ContainerForm from "../components/Login-Cadastro/ContainerForm";
 
-import Coroa from "../assets/Imagens/Cadastro/Coroa.svg";
+import CoroaRainha from "../assets/Imagens/Cadastro/CoroaRainha.svg";
 import Vallete from "../assets/Imagens/Cadastro/Valette.svg";
-import Carta1 from "../assets/Imagens/Cadastro/CheapTop.svg";
-import Carta2 from "../assets/Imagens/Cadastro/CheapBottom.svg";
+import CheapCartTop from "../assets/Imagens/Cadastro/CheapTop.svg";
+import CheapCartBottom from "../assets/Imagens/Cadastro/CheapBottom.svg";
 
 import "../styles/Cadastro.css";
 
 export default function Cadastro() {
   return (
-    <div className="registerBackground">
+    <div className="cadastroBackground">
       <ContainerForm>
         {/* Ícones */}
-        <img src={Coroa} alt="Coroa" className="icon crown" />
-        <img src={Vallete} alt="Lança" className="icon spear" />
-        <img src={Carta1} alt="Carta" className="icon cardIcon" style={{ top: "10px", left: "20px" }} />
-        <img src={Carta2} alt="Carta" className="icon cardIcon" style={{ bottom: "20px", right: "30px" }} />
+        <img src={CoroaRainha} alt="Coroa" className="iconsContainer coroaRainha" />
+        <img src={CheapCartTop} alt="Carta" className="iconsContainer cheapCartaTop" />
+        <img src={Vallete} alt="Lança" className="iconsContainer valleteCopas" />
+        <img src={CheapCartBottom} alt="Carta" className="iconsContainer cheapCartaBottom" />
 
-        <h2 className="registerTitle">CADASTRO</h2>
+        <h2 className="cadastroTitle">Cadastro</h2>
 
         <InputField 
           label="Seu nome:" 
@@ -35,7 +35,7 @@ export default function Cadastro() {
           placeholder="Exemplo: 123miguel" 
         />
 
-        <Button 
+        <ArrowButton 
           text="CADASTRAR" 
           onClick={() => alert("Cadastro realizado")} 
         />
