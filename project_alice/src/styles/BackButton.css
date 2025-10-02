@@ -5,7 +5,7 @@ body, html {
   height: 100%;
 }
 
-.back-button-container {
+.backButtonContainer {
   position: relative;
   background-color: #923190; 
   width: 180px;
@@ -17,7 +17,7 @@ body, html {
   margin-top: 30px;
 }
 
-.back-button-container::before {
+.backButtonContainer::before {
   content: '';
   position: absolute;
   left: -23px; 
@@ -25,13 +25,13 @@ body, html {
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
-  border-right: 40px solid #923190;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-right: 50px solid #923190;
 }
 
 /* Borda da ponta da seta */
-.back-button-container::after {
+.backButtonContainer::after {
     content: '';
     position: absolute;
     left: -27px;
@@ -39,20 +39,53 @@ body, html {
     transform: translateY(-50%);
     width: 0;
     height: 0;
-    border-top: 27px solid transparent;
-    border-bottom: 27px solid transparent;
-    border-right: 27px solid #923190; 
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid #923190; 
     z-index: -1;
 }
 
-.back-button {
+.backButton {
   background: none;
   border: none;
   color: white;
-  font-family: 'Arial', sans-serif;
   font-size: 32px;
   font-weight: bold;
-  padding: 0;
+  margin-bottom: 20px;
   margin: 0;
   pointer-events: none;
+}
+
+/* estilização dos selos */
+.sealsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px; 
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/* cada um dos selos */
+.seloItem {
+  position: relative;
+  width: 110px;
+  height: 110px;
+}
+
+.seloImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.seloValue {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: bold;
+  color: #5c1a5c;
 }

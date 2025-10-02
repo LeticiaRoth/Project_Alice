@@ -1,0 +1,28 @@
+.progressBarWrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.navArrow {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.progressBar {
+  flex: 1;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #ddd;
+  overflow: hidden;
+  border: 1px solid #aaa;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(to right, #91C4DD, #36A6DD, #105F89);
+  transition: width 0.3s ease;
+}

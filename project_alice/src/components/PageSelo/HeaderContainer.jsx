@@ -1,15 +1,13 @@
 import React from "react";
 import Cat from '../../assets/Imagens/SeloPage/Cat.svg';
 import BackButton from '../../components/BackButton';
+import '../../styles/PageSelo.css';
 
 const HeaderContainer = () => {
   return (
-    <div className="header">
-      {/* Botão Voltar */}
+    <div className="headerContainer">
       <BackButton />
-
-      {/* Gato */}
-      <img src={Cat} alt="Gato sorridente" className="cat" />
+      <img src={Cat} alt="Gato sorridente" className="catImage" />
     </div>
   );
 };

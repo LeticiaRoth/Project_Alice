@@ -1,6 +1,5 @@
 import React from "react";
 import '../styles/BackButton.css';
-import BackSeta from '../assets/Imagens/BackSeta.svg'; // Corrigido
 
 const BackButton = ({ onClick }) => {
     const handleClick = () => {
@@ -8,8 +7,8 @@ const BackButton = ({ onClick }) => {
     };
     
     return (
-        <div className="back-button-container" onClick={handleClick}>
-        <button className="back-button">Voltar</button>
+        <div className="backButtonContainer" onClick={handleClick}>
+        <button className="backButton">Voltar</button>
         </div>
     );
 };

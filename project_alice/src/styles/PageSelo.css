@@ -32,11 +32,12 @@ body, html {
 
 /* Título */
 .title {
-  font-size: 60px;
+  font-size: 48px;
   font-weight: bold;
   color: #901B8E;
-  margin: 12% 0;
+  margin: 20px 0 60px 0; 
 }
+
 
 /* Espaço vazio para selos */
 .sealsSpace {
@@ -44,33 +45,16 @@ body, html {
 }
 
 /* Header */
-.header {
+.headerContainer {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 40px;
+  margin-left: 80px;
   position: relative;
 }
 
-.backButton {
-  display: flex;
-  align-items: center;
-  background: #7e22ce;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.backButton .arrow {
-  margin-right: 8px;
-  width: 16px;
-  height: 16px;
-}
-
-.cat {
+.catImage {
   position: absolute;
   bottom: -70px;
   right: -160px;
@@ -107,4 +91,43 @@ body, html {
 @keyframes float {
   0%, 100% { transform: translateY(0) translateX(0); }
   50% { transform: translateY(30px) translateX(30px); }
+}
+
+/* estilização dos selos */
+/* Grid de selos */
+.sealsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 80px 120px; 
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 750px; 
+  padding: 40px 0;
+}
+
+/* Cada selo */
+.seloItem {
+  position: relative;
+  width: 191px;  
+  height: 178px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seloImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Texto dentro do selo */
+.seloValue {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #5c1a5c;
 }
