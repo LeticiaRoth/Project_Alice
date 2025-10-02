@@ -1,10 +1,11 @@
 import React from "react";
+import "../../styles/InputField.css";
 
-export default function InputField({ label, type, placeholder, required, error }) {
+export default function InputField({ label, type, placeholder, required }) {
   return (
     <div className="inputGroup">
-      <label className={error ? "errorLabel" : ""}>{label}</label>
-      <input type={type} placeholder={placeholder} required={required} className={error ? "inputError" : ""} />
+      <label>{label}</label>
+      <input type={type} placeholder={placeholder} required={required} />
     </div>
   );
 }

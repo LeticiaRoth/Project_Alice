@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="navbarLinks">
         <Link to="/" className="navLink">Início</Link>
         <Link to="/tutorial" className="navLink">Tutorial</Link>
-        <Link to="/selos" className="navLink">Meus Selos</Link>
+        <Link to="/paginaSelo" className="navLink">Meus Selos</Link>
       </div>
     </nav>
   );

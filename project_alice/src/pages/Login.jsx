@@ -16,39 +16,41 @@ import "../styles/Login.css";
 export default function Login() {
   return (
     <div className="loginBackground">
-      {/* Card com ícones dentro */}
-      <ContainerForm>
-        {/* Ícones decorativos */}
-        <img src={ChapeuChapeleiro} alt="Hat" className="iconsContainer chapeuChapeleiro" />
-        <img src={Relogio} alt="Clock" className="iconsContainer relogio" />
-        <img src={Chave} alt="Key" className="iconsContainer chaves" />
-        <img src={BuleCha} alt="Teapot" className="iconsContainer buleCha" />
-
-        <h2 className="loginTitle">LOGIN</h2>
-
-        <InputField 
-          label="Seu nome ou username:" 
-          type="text" 
-          placeholder="Exemplo: MiguelMendes234" 
-          required 
-        />
-
-        <InputField 
-          label="Sua senha:" 
-          type="password" 
-          placeholder="Exemplo: 123miguel" 
-        />
-
-        <TextLink 
-          text="Sua primeira vez lendo o livro?" 
-          to="/register" 
-        />
-
-        <ArrowButton 
-          text="Entrar" 
-          onClick={() => alert("Login clicado")} 
-        />
-      </ContainerForm>
+    {/* Card com ícones dentro */}
+    <ContainerForm>
+    {/* Ícones decorativos */}
+    <img src={ChapeuChapeleiro} alt="Hat" className="iconsContainer chapeuChapeleiro" />
+    <img src={Relogio} alt="Clock" className="iconsContainer relogio" />
+    <img src={Chave} alt="Key" className="iconsContainer chaves" />
+    <img src={BuleCha} alt="Teapot" className="iconsContainer buleCha" />
+    
+    <h2 className="loginTitle">LOGIN</h2>
+    
+    <InputField 
+    label="Seu nome ou username:" 
+    type="text" 
+    placeholder="Exemplo: MiguelMendes234" 
+    required 
+    labelColor="default" 
+    />
+    
+    <InputField 
+    label="Sua senha:" 
+    type="password" 
+    placeholder="Exemplo: 123miguel" 
+    labelColor="default" 
+    />
+    
+    <TextLink 
+    text="Sua primeira vez lendo o livro?" 
+    to="/register" 
+    />
+    
+    <ArrowButton 
+    text="Entrar" 
+    to="/home"
+    />
+    </ContainerForm>
     </div>
   );
 }

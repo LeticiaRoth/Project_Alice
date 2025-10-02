@@ -87,7 +87,6 @@ body, html {
 }
 
 .arrowButton:focus {
-  outline: 3px solid #185A38;
   outline-offset: 4px;
   border-radius: 6px;
 }

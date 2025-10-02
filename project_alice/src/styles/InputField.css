@@ -1,0 +1,41 @@
+/* Container do input */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* garante que label fica alinhada à esquerda */
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 650px;
+}
+
+/* Label pega a cor do "pai" (loginBackground ou cadastroBackground) */
+.loginBackground .inputGroup label {
+  color: #B2362D;  /* LOGIN */
+}
+
+.cadastroBackground .inputGroup label {
+  color: #25759F;  /* CADASTRO */
+}
+
+.inputGroup label {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* Input */
+.inputGroup input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #9A9A9A;
+  border-radius: 10px;
+  background-color: #F1F1F1;
+  cursor: text;
+  font-size: 20px;
+}
+
+.inputGroup ::placeholder {
+  font-size: 18px;
+  color: #646462;
+}

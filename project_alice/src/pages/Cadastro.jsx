@@ -13,33 +13,36 @@ import "../styles/Cadastro.css";
 export default function Cadastro() {
   return (
     <div className="cadastroBackground">
-      <ContainerForm>
-        {/* Ícones */}
-        <img src={CoroaRainha} alt="Coroa" className="iconsContainer coroaRainha" />
-        <img src={CheapCartTop} alt="Carta" className="iconsContainer cheapCartaTop" />
-        <img src={Vallete} alt="Lança" className="iconsContainer valleteCopas" />
-        <img src={CheapCartBottom} alt="Carta" className="iconsContainer cheapCartaBottom" />
-
-        <h2 className="cadastroTitle">Cadastro</h2>
-
-        <InputField 
-          label="Seu nome:" 
-          type="text" 
-          placeholder="Exemplo: Miguel" 
-          required 
-        />
-
-        <InputField 
-          label="Crie uma senha:" 
-          type="password" 
-          placeholder="Exemplo: 123miguel" 
-        />
-
-        <ArrowButton 
-          text="CADASTRAR" 
-          onClick={() => alert("Cadastro realizado")} 
-        />
-      </ContainerForm>
+    <ContainerForm>
+    {/* Ícones */}
+    <img src={CoroaRainha} alt="Coroa" className="iconsContainer coroaRainha" />
+    <img src={CheapCartTop} alt="Carta" className="iconsContainer cheapCartaTop" />
+    <img src={Vallete} alt="Lança" className="iconsContainer valleteCopas" />
+    <img src={CheapCartBottom} alt="Carta" className="iconsContainer cheapCartaBottom" />
+    
+    <h2 className="cadastroTitle">Cadastro</h2>
+    
+    <InputField 
+    label="Seu nome ou username:" 
+    type="text" 
+    placeholder="Exemplo: MiguelMendes234" 
+    required 
+    labelColor="cadastro" 
+    />
+    
+    <InputField 
+    label="Crie uma senha:" 
+    type="password" 
+    placeholder="Exemplo: 123miguel" 
+    labelColor="cadastro" 
+    />
+    
+    
+    <ArrowButton 
+    text="Cadastar" 
+    onClick={() => alert("Cadastro realizado")} 
+    />
+    </ContainerForm>
     </div>
   );
 }

@@ -84,38 +84,40 @@ body, html {
 }
 
 /* Inputs */
-.inputGroup {
-  text-align: left;
-  margin-bottom: 18px;
+.inputGroup{
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
   position: relative;
-  
 }
 
 .inputGroup label {
+  width: 90%;
+  max-width: 650px;
+  text-align: left;
   font-weight: bold;
   font-size: 24px;
   color: #25759F;
-  display: block;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .inputGroup input {
-  margin-bottom: 10px;
-  width: 525px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 650px;
   height: 40px;
   padding: 8px 10px;
   border: 1px solid #9A9A9A;
   border-radius: 10px;
   background-color: #F1F1F1;
-  cursor: pointer;
+  cursor: text;
   font-size: 24px;
-}
-
-.inputGroup input:active {
-  border: 1px solid #767474;
 }
 
 .inputGroup ::placeholder{
   font-size: 20px;
   color: #646462;
 }
+

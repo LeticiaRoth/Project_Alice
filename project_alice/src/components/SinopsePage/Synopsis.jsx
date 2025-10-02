@@ -1,4 +1,5 @@
 import React from "react";
+import bookImage from '../../assets/Imagens/Sinopse/BookSinopse.svg';
 
 export default function Synopsis({ title, bookImage, description }) {
   return (

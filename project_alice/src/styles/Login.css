@@ -33,7 +33,7 @@ body, html {
 .loginBackground::after {
   content: "";
   position: absolute;
-  bottom: -30px;
+  top: 190px;
   right: -100px;
   width: 500px;
   height: auto;
@@ -47,55 +47,55 @@ body, html {
   background: #fff;
   padding: 40px 60px;
   border-radius: 20px;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 1000px;
-  height: 500px;
+  
+  max-width: 1055px; 
+  width: 90%; 
+  max-height: 643px; 
   position: relative;
   z-index: 1;
   margin: 5% auto;
-  justify-content: center;
-  align-items: center;
 }
 
 .loginTitle {
   font-size: 65px;
   font-weight: bold;
   color: #1D7CA8;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   text-transform: uppercase;
 }
 
 /* Inputs */
 .inputGroup {
-  text-align: left;
-  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* garante centralização */
+  margin-bottom: 25px;
   position: relative;
-  
 }
 
 .inputGroup label {
+  width: 90%; /* mesma largura do input */
+  max-width: 650px;
+  text-align: left; /* alinhado à esquerda */
   font-weight: bold;
   font-size: 24px;
-  color: #B2362D;
-  display: block;
-  margin-bottom: 15px;
+  color: #CC0000;
+  margin-bottom: 8px;
 }
 
 .inputGroup input {
-  margin-bottom: 10px;
-  width: 525px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 650px;
   height: 40px;
   padding: 8px 10px;
   border: 1px solid #9A9A9A;
   border-radius: 10px;
   background-color: #F1F1F1;
-  cursor: pointer;
+  cursor: text;
   font-size: 24px;
-}
-
-.inputGroup input:active {
-  border: 1px solid #767474;
 }
 
 .inputGroup ::placeholder{
@@ -103,10 +103,9 @@ body, html {
   color: #646462;
 }
 
-
 /* link de primeiro acesso */
 .linkText {
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 30px;
   color: #545758;
   text-align: center;

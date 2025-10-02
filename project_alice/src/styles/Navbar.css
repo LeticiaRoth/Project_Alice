@@ -1,6 +1,6 @@
 .navbarContainer {
   width: auto;
-  height: 81px;
+  height: 107px;
   background: linear-gradient(to right, #91C4DD, #36A6DD, #105F89);
   display: flex;
   justify-content: flex-end;
@@ -14,13 +14,9 @@
 }
 
 .navLink {
-  color: white;
+  color: #ffffff;
   font-size: 32px;
   font-weight: 500;
   text-decoration: none;
   transition: 0.3s ease;
-}
-
-.navLink:hover {
-  text-decoration: underline;
 }

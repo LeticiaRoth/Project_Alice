@@ -5,19 +5,29 @@ body, html {
   height: 100%;
 }
 
+.titleChaptersPage {
+  color: #285217;
+  font-size: 65px;
+}
+
+.descriptionChaptersPage {
+  color: #447132;
+  font-size: 40px;
+}
+
 /* ======= Cards ======= */
 .chapterCard {
   position: relative;
-  width: 200px;
-  height: 160px;
+  max-width: 290px;
+  max-height: 320px;
   border: 2px solid;
   border-radius: 12px;
   padding: 10px;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   background-size: cover;
   background-position: center;
+  margin-bottom: 40px;
 }
 
 .chapterImage {
@@ -64,33 +74,24 @@ body, html {
 /* ======= Página ======= */
 .chaptersPage {
   min-height: 100vh;
-  background-color: #f7fff9;
+  background-color: #F5FFF6;
   padding: 20px;
-  position: relative; /* necessário p/ posicionar decorativos */
+  position: relative;
   overflow: hidden;
 }
 
 .chaptersHeader {
   text-align: center;
-  margin-bottom: 40px;
-}
-
-.chaptersHeader h2 {
-  font-size: 28px;
-  font-weight: bold;
-  color: #285217;
-}
-
-.chaptersHeader p {
-  font-size: 18px;
-  color: #447132;
+  margin-bottom: 80px;
 }
 
 .chaptersGrid {
+  margin: 50px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
+  gap: 20px;
   justify-items: center;
+  padding: 0 80px;
 }
 
 /* ======= Xícaras ======= */
@@ -100,12 +101,11 @@ body, html {
   opacity: 0.95;
 }
 
-.cup1 { top: 80px; left: 30px; transform: rotate(-15deg); }
-.cup2 { top: 80px; right: 40px; transform: rotate(20deg); }
-.cup3 { top: 280px; right: 20px; transform: rotate(-25deg); }
-.cup4 { top: 380px; left: 40px; transform: rotate(30deg); }
-.cup5 { bottom: 100px; left: 50px; transform: rotate(-20deg); }
-.cup6 { bottom: 70px; right: 70px; transform: rotate(15deg); }
+.cup1 { top: 10px; left: 10px; transform: rotate(-15deg); width: 180px; }
+.cup2 { top: 10px; right: 20px; width: 180px; }
+.cup3 { top: 780px; right: -1px; width: 80px; }
+.cup4 { top: 540px; left: -2px; width: 100px;}
+.cup5 { bottom: -5px; left: -2px; width: 100px;}
 
 .decor {
   position: absolute;

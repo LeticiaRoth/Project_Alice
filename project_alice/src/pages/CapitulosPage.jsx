@@ -2,6 +2,8 @@ import React from "react";
 import '../styles/CapitulosPage.css'
 import CapituloCard from "../components/Capitulos/CapituloCard";
 
+// importando navbar
+import Navbar from '../components/Navbar';
 // Personagens
 import Coelho from "../assets/Imagens/CapitulosPage/Personagem/ImageCoelho.svg";
 import Macaneta from "../assets/Imagens/CapitulosPage/Personagem/ImageMacaneta.svg";
@@ -11,6 +13,10 @@ import Lagarta from "../assets/Imagens/CapitulosPage/Personagem/ImageLagarta.svg
 import Duquesa from "../assets/Imagens/CapitulosPage/Personagem/ImageDuquesa.svg";
 import ChapeleiroMaluco from "../assets/Imagens/CapitulosPage/Personagem/ImageChapeleiroMaluco.svg";
 import Alice from "../assets/Imagens/CapitulosPage/Personagem/ImageAlice.svg";
+import RainhaVermelha from "../assets/Imagens/CapitulosPage/Personagem/ImageRainhaVermelha.svg";
+import Jabuti from "../assets/Imagens/CapitulosPage/Personagem/ImageJabuti.svg";
+import Griffo from "../assets/Imagens/CapitulosPage/Personagem/ImageGriffo.svg";
+import Vallete from "../assets/Imagens/CapitulosPage/Personagem/ImageVallete.svg";
 
 // Fundos
 import BgCoelho from "../assets/Imagens/CapitulosPage/BackgroundCard/BgCoelho.svg";
@@ -18,11 +24,11 @@ import BgMacaneta from "../assets/Imagens/CapitulosPage/BackgroundCard/BgMacanet
 import BgDodo from "../assets/Imagens/CapitulosPage/BackgroundCard/BgDodo.svg";
 
 // Decorativos
-import CupsRightTop from "../assets/Imagens/CapitulosPage/Decor/CupsTopRight.svg";
-import CupsRight from "../assets/Imagens/CapitulosPage/Decor/CupsRight.svg";
-// import CupsBottom from "../assets/Imagens/CapitulosPage/Decor/CupsBottom.svg";
+import CupsRightTop from "../assets/Imagens/CapitulosPage/Decor/CupsTopLeft.svg";
+import CupsRight from "../assets/Imagens/CapitulosPage/Decor/CupsTopRight.svg";
+import CupsBottom from "../assets/Imagens/CapitulosPage/Decor/CupsRight.svg";
 import CupsLeft from "../assets/Imagens/CapitulosPage/Decor/CupsLeft.svg";
-import CupsTopLeft from "../assets/Imagens/CapitulosPage/Decor/CupsTopLeft.svg";
+import CupsTopLeft from "../assets/Imagens/CapitulosPage/Decor/CupsBottomLeft.svg";
 
 
 const CapitulosPage = () => {
@@ -101,6 +107,7 @@ const CapitulosPage = () => {
       route: "/capitulo8",
       bgColor: "#ffebee",
       borderColor: "#ad1457",
+      image: RainhaVermelha,
     },
     {
       number: 9,
@@ -109,18 +116,21 @@ const CapitulosPage = () => {
       route: "/capitulo9",
       bgColor: "#fffde7",
       borderColor: "#fbc02d",
+      image: Jabuti,
     },
     {
       number: 10,
-      title: "A QUEDINHA DAS LAGOSTAS",
+      title: "A QUADRILHA DAS LAGOSTAS",
       bgColor: "#fbe9e7",
       borderColor: "#ef6c00",
+      image: Griffo, 
     },
     {
       number: 11,
       title: "QUEM ROUBOU AS TORTAS?",
       bgColor: "#eceff1",
       borderColor: "#607d8b",
+      image: Vallete,
     },
     {
       number: 12,
@@ -134,16 +144,18 @@ const CapitulosPage = () => {
   ];
 
   return (
+    <>
+    <Navbar />
     <div className="chaptersPage">
       <header className="chaptersHeader">
-        <h2>CAPÍTULOS</h2>
-        <p>Continue a história por aqui!!</p>
+        <h2 className="titleChaptersPage">CAPÍTULOS</h2>
+        <p className="descriptionChaptersPage">Continue a história por aqui!!</p>
       </header>
 
       {/* Xícaras */}
       <img src={CupsRightTop} alt="Cups" className="cupDecoration cup1" />
       <img src={CupsRight} alt="Cups" className="cupDecoration cup2" />
-      {/* <img src={CupsBottom} alt="Cups" className="cupDecoration cup3" /> */}
+      <img src={CupsBottom} alt="Cups" className="cupDecoration cup3" />
       <img src={CupsLeft} alt="Cups" className="cupDecoration cup4" />
       <img src={CupsTopLeft} alt="Cups" className="cupDecoration cup5" />
 
@@ -161,6 +173,7 @@ const CapitulosPage = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,14 +1,22 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import '../styles/BackButton.css';
 
-const BackButton = ({ onClick }) => {
+const BackButton = ({ to = '/paginaCapitulos' }) => {
+    const navigate = useNavigate();
+
     const handleClick = () => {
-        console.log('Botão "Voltar" clicado!');
+        if (to) {
+            navigate(to);
+        } else {
+            navigate(-1);
+        }
+        console.log(`Navegando para: ${to || 'página anterior'}`);
     };
     
     return (
         <div className="backButtonContainer" onClick={handleClick}>
-        <button className="backButton">Voltar</button>
+            <button className="backButton">Voltar</button>
         </div>
     );
 };
