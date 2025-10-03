@@ -2,13 +2,13 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  width: 300px;
+  width: 628px;
   margin: 20px auto;
 }
 
 .navArrow {
-  width: 30px;
-  height: 30px;
+  width: 94px;
+  height: 89px;
   cursor: pointer;
 }
 

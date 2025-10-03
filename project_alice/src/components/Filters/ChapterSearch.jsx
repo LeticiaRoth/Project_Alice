@@ -5,37 +5,34 @@ export default function ChapterSearch({ chapterNumber, chapterTitle, onWordSearc
   const [letter, setLetter] = useState("");
 
   return (
-    <div className="chapterSearchContainer">
-      <h3 className="chapterSearchTitle">Interaja com o livro</h3>
-      <div className="chapterCard">
-        <h4>Capítulo {chapterNumber}</h4>
-        <p>{chapterTitle}</p>
+    <div className="chapterCard">
+      <h3 className="chapterSearchTitle">CAPÍTULO {chapterNumber}</h3>
+      <h4 className="textSearchTitle">{chapterTitle}</h4>
 
-        <label>Escreva uma palavra:</label>
-        <input
-          type="text"
-          placeholder="Exemplo: Alice"
-          value={word}
-          onChange={(e) => {
-            setWord(e.target.value);
-            onWordSearch(e.target.value);
-          }}
-        />
-        <span>Aparece: {wordCount} vezes</span>
+      <label>Escreva uma palavra:</label>
+      <input
+        type="text"
+        placeholder="Exemplo: Alice"
+        value={word}
+        onChange={(e) => {
+          setWord(e.target.value);
+          onWordSearch(e.target.value);
+        }}
+      />
+      <span>Aparece: {wordCount} vezes</span>
 
-        <label>Escreva uma letra:</label>
-        <input
-          type="text"
-          placeholder="Exemplo: A ou a"
-          maxLength={1}
-          value={letter}
-          onChange={(e) => {
-            setLetter(e.target.value);
-            onLetterSearch(e.target.value);
-          }}
-        />
-        <span>Aparece: {letterCount} vezes</span>
-      </div>
+      <label>Escreva uma letra:</label>
+      <input
+        type="text"
+        placeholder="Exemplo: A ou a"
+        maxLength={1}
+        value={letter}
+        onChange={(e) => {
+          setLetter(e.target.value);
+          onLetterSearch(e.target.value);
+        }}
+      />
+      <span>Aparece: {letterCount} vezes</span>
     </div>
   );
 }

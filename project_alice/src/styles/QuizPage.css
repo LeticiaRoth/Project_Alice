@@ -5,85 +5,115 @@ body, html {
   height: 100%;
 }
 
-/* Header */
-.header {
-  background: linear-gradient(to right, #b26ec0, #8b4b9d);
-  padding: 15px 30px;
+/* estilização dos botões de resposta */
+.answerButton {
+  background-color: #305D7F;
+  color: #ffffff;
+  border: 1px solid #13396E;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-size: 24px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 328px;
+  height: 48px;
 }
 
-.navMenu a {
-  color: white;
-  text-decoration: none;
-  margin-right: 20px;
-  font-weight: bold;
+.answerButton:hover {
+  background-color: #1a364c;
 }
 
-/* Question Card */
-.questionCardContainer {
-  position: relative;
-  width: 600px;
-  margin: 50px auto;
-}
-
+/* estilização do card da pergunta*/
 .questionCard {
-  background-color: #f7f0e6;
+  background: radial-gradient(circle, #FFFFFF 0%, rgba(174, 136, 54, 0.6) 100%);
   border-radius: 10px;
-  padding: 40px;
+  border: 2px solid #000000;
+  padding: 20px;
+  width: 930px;
+  height: 550px;
+  position: relative;
+  text-align: center;
+  display: flex;             
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;
+  margin: 0 auto;
+}
+
+.questionHeader {
+  width: 50%;
+  background-color: #583000;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 80px;
+  padding: 8px;
+  margin: 0 auto 80px;
+}
+
+.questionContent {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  padding: 8px 16px 20px;
+  width: 500px;
+  min-height: 200px;
+  margin: 0 auto;
+}
+
+.questionContent p {
+  font-size: 30px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 10px;
+}
+
+/* estilização da página em si */
+.quizContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh; 
   text-align: center;
   position: relative;
 }
 
-.questionTitle {
-  background-color: #8b5e2d;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 20px;
+/* Coelho fica ao lado esquerdo do container */
+.coelhoImg {
+  position: absolute;
+  left: 60px;
+  bottom: -30px;
+  width: 704px;
+  height: 652px;
+  z-index: 10;
 }
 
-/* Inputs */
-.inputField {
-  display: block;
-  width: 80%;
-  margin: 10px auto;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-/* Next Button */
+/* Botão próximo centralizado embaixo */
 .nextButton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 20px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 50%;
+  position: fixed;   
+  right: 40px;      
+  top: 60%;        
+  transform: translateY(-50%);
+  width: 94px;
+  height: 89px;
   cursor: pointer;
+  z-index: 10;    
 }
 
-/* Images */
-.rabbitImage {
+/* Relógio dentro do card */
+.clockInside {
   position: absolute;
-  bottom: -20px;
-  left: -60px;
-  width: 120px;
-}
-
-.clockImage {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 50px;
-}
-
-/* Main content */
-.mainContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  top: -80px;
+  right: -40px;
+  width: 146px;
+  height: 179px;
 }

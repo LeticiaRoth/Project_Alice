@@ -145,7 +145,7 @@ const CapitulosPage = () => {
 
   return (
     <>
-    <Navbar />
+    <Navbar bgColor="bgGreen"/>
     <div className="chaptersPage">
       <header className="chaptersHeader">
         <h2 className="titleChaptersPage">CAPÍTULOS</h2>
