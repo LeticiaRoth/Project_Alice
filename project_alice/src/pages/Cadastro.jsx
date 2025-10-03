@@ -39,7 +39,7 @@ export default function Cadastro() {
     
     
     <ArrowButton 
-    text="Entrar" 
+    text="Cadastrar" 
     to="/tutorial"
     />
     </ContainerForm>

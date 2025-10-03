@@ -1,11 +1,12 @@
-/* Reset e base */
+/* Reset */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: 'Arial', sans-serif;
 }
 
-/* fundo da tela */
+/* Fundo azul com blur */
 .loginBackground {
   background-color: #3E9ECF;
   height: 100vh;
@@ -16,7 +17,6 @@ body, html {
   overflow: hidden;
 }
 
-/* blur do canto superior esquerdo */
 .loginBackground::before {
   content: "";
   position: absolute;
@@ -29,35 +29,33 @@ body, html {
   border-radius: 50%;
 }
 
-/* blur do canto inferior direito */
 .loginBackground::after {
   content: "";
   position: absolute;
-  top: 190px;
+  bottom: -100px;
   right: -100px;
   width: 500px;
-  height: auto;
+  height: 300px;
   background: radial-gradient(circle, #ACD5E8 0%, transparent 50%);
   filter: blur(40px);
   border-radius: 50%;
 }
 
-/* Card */
+/* Card branco */
 .formContainer {
   background: #fff;
   padding: 40px 60px;
   border-radius: 20px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
   text-align: center;
-  
   max-width: 1055px; 
   width: 90%; 
   max-height: 643px; 
   position: relative;
   z-index: 1;
-  margin: 5% auto;
 }
 
+/* Título */
 .loginTitle {
   font-size: 65px;
   font-weight: bold;
@@ -70,15 +68,15 @@ body, html {
 .inputGroup {
   display: flex;
   flex-direction: column;
-  align-items: center; /* garante centralização */
+  align-items: center;
   margin-bottom: 25px;
   position: relative;
 }
 
 .inputGroup label {
-  width: 90%; /* mesma largura do input */
+  width: 90%;
   max-width: 650px;
-  text-align: left; /* alinhado à esquerda */
+  text-align: left;
   font-weight: bold;
   font-size: 24px;
   color: #CC0000;
@@ -86,24 +84,22 @@ body, html {
 }
 
 .inputGroup input {
-  margin-bottom: 20px;
   width: 90%;
   max-width: 650px;
-  height: 40px;
-  padding: 8px 10px;
+  height: 45px;
+  padding: 8px 12px;
   border: 1px solid #9A9A9A;
   border-radius: 10px;
   background-color: #F1F1F1;
-  cursor: text;
-  font-size: 24px;
+  font-size: 22px;
 }
 
-.inputGroup ::placeholder{
+.inputGroup ::placeholder {
   font-size: 20px;
   color: #646462;
 }
 
-/* link de primeiro acesso */
+/* Link de cadastro */
 .linkText {
   font-size: 22px;
   margin-top: 30px;
@@ -123,94 +119,12 @@ body, html {
   text-decoration: underline;
 }
 
-/* ícones decorativos dentro do container */
+/* Ícones decorativos */
 .iconsContainer {
   position: absolute;
-  width: 90px;
 }
 
-.chapeuChapeleiro {
-  top: -130px;
-  left: -130px;
-  width: 240px;
-  z-index: 10;
-}
-
-.relogio {
-  top: -110px;
-  right: -100px;
-  width: 200px;
-  z-index: 10;
-}
-
-.chaves {
-  bottom: -40px;
-  left: -20px;
-  width: 140px;
-  z-index: 10;
-}
-
-.buleCha {
-  bottom: -60px;
-  right: -120px;
-  width: 270px;
-  z-index: 10;
-}
-
-/* estilização do botão em formato de seta*/
-.arrowButton {
-  justify-content: center;
-  align-items: center;
-  margin: 40px 0;
-  position: relative;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
-  padding: 0;
-  width: 190px;  
-  height: 60px;
-  display: flex;
-  overflow: hidden;
-}
-
-.arrowShape {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #669554;
-  border-color: #185A38;
-  
-  /* ponta mais grossa e corpo mais estreito */
-  clip-path: polygon(
-  0% 50%,      
-  25% 0%,      
-  80% 0%,      
-  80% 100%,   
-  25% 100%     
-  );
-  
-  z-index: 0;
-  transition: transform 0.4s ease, background 0.3s ease;
-  transform-origin: center;
-}
-
-/* texto do botão */
-.arrowText {
-  position: relative;
-  z-index: 1;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-  width: 100%;
-}
-
-/* ===== Hover (só a seta gira) ===== */
-.arrowButton:hover .arrowShape {
-  background: #24532c;
-  transform: rotate(180deg);
-}
-
+.chapeuChapeleiro { top: -130px; left: -130px; width: 240px; }
+.relogio { top: -110px; right: -100px; width: 200px; }
+.chaves { bottom: -40px; left: -20px; width: 140px; }
+.buleCha { bottom: -60px; right: -120px; width: 270px; }
