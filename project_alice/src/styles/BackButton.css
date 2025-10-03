@@ -1,91 +1,26 @@
-/* Reset e base */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-.backButtonContainer {
-  position: relative;
-  background-color: #923190; 
-  width: 180px;
-  height: 35px;
-  padding: 8px 0;
-  border: 1px solid #6D194C; 
-  cursor: pointer;
-  display: inline-block;
-  margin-top: 30px;
-}
-
-.backButtonContainer::before {
-  content: '';
-  position: absolute;
-  left: -23px; 
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent;
-  border-right: 50px solid #923190;
-}
-
-/* Borda da ponta da seta */
-.backButtonContainer::after {
-    content: '';
-    position: absolute;
-    left: -27px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-right: 30px solid #923190; 
-    z-index: -1;
-}
-
 .backButton {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  margin: 0;
-  pointer-events: none;
-}
-
-/* estilização dos selos */
-.sealsGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px; 
-  justify-items: center;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 500px;
-}
-
-/* cada um dos selos */
-.seloItem {
   position: relative;
-  width: 110px;
-  height: 110px;
-}
-
-.seloImage {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.seloValue {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 22px;
+  display: inline-block;
+  background-color: #923190; 
+  color: #fff;
   font-weight: bold;
-  color: #5c1a5c;
+  font-size: 24px;
+  border: none;
+  padding: 36px 40px;
+  cursor: pointer;
+  clip-path: polygon(
+    0% 50%, 20% 0%, 20% 30%, 100% 30%, 
+    100% 70%, 20% 70%, 20% 100%
+  );
+  outline: none;
+}
+
+.button {
+  margin-top: 40px;
+  margin-left: 80px;
+}
+
+.buttonLeft {
+  margin-top: -40px;
+  margin-left: 90px;
 }

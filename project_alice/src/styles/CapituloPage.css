@@ -6,7 +6,6 @@ html {
 }
 
 .chapterPage {
-  background-color: #fdfcf8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,160 +13,67 @@ html {
   padding-bottom: 40px;
 }
 
-/* ------------------ */
 /* Texto introdutório */
-/* ------------------ */
 .chapterIntro {
   text-align: center;
-  margin: 25px 0 15px;
+  margin: 10px 0 10px;
   max-width: 700px;
 }
 
 .chapterIntro h4 {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: bold;
-  color: #1E3726;
-  margin-bottom: 40px;
+  color: #1e3726;
+  margin-bottom: 18px;
 }
 
 .chapterIntro p {
-  font-size: 27px;
-  color: #5f5f5f;
+  font-size: 28px;
+  color: #555;
   margin: 0;
-}
-
-/* ------------------ */
-/* Hero: card + img   */
-/* ------------------ */
-.chapterHeroWrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-  width: 100%;
-}
-
-.chapterHero {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  max-width: 950px;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 80px;
-}
-
-/* ------------------ */
-/* Card de pesquisa   */
-/* ------------------ */
-.chapterCard {
-  margin-top: 50px;
-  background: radial-gradient(circle at center, #ffffff 20%, #BDE7BD 100%);
-  border: 3px solid #259135;
-  border-radius: 8px;
-  padding: 50px;
-  width: 779px;
-  height: 520px;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08);
-}
-
-.chapterSearchTitle {
-  font-size: 32px;
-  text-align: center;
-  color: #1E3726;
-  margin: 5px 0 4px;
-}
-
-.textSearchTitle {
-  font-size: 24px;
-  text-align: center;
-  color: #3D3934;
   margin-bottom: 30px;
 }
 
-.chapterCard label {
-  display: block;
-  font-size: 24px;
-  margin: 10px 0 14px;
-  font-weight: 600;
-  color: #B2362D;
-  text-align: left;
-}
-
-.chapterCard input {
-  width: 399px;
-  height: 43px;
-  padding: 7px 9px;
-  border: 1px solid #9A9A9A;
-  border-radius: 5px;
-  margin-bottom: 6px;
-  font-size: 20px;
-  color: #3c3c3b;
-}
-
-.chapterCard span {
-  display: block;
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 12px;
-  font-weight: bold;
-  text-align: right;
-}
-
-/* ------------------ */
-/* Personagem         */
-/* ------------------ */
-.characterImage {
-  max-height: 590px;
-  width: 346px;
-  width: auto;
-}
-
-/* ------------------ */
-/* Livro aberto       */
-/* ------------------ */
+/* Livro aberto */
 .bookWrapper {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  width: 900px;
-  max-width: 1010px;   
-  height: 600px;       
-  margin-bottom: 35px;
+  width: 1001px;
+  max-width: 1010px;
+  height: 713px;
+  margin-top: 50px;
   background: url("../assets/Imagens/CapituloPage/ImageBookAberto.svg") no-repeat center top;
   background-size: contain;
-  padding: 20px 60px;  
+  padding: 50px 60px;
 }
 
 .chapterTexts {
   display: flex;
   justify-content: space-between;
-  gap: 60px;
   width: 100%;
+  gap: 50px;
 }
 
 .chapterTextBox {
   flex: 1;
-  padding: 20px;
-  font-size: 23px;
+  font-size: 24px;
   line-height: 1.7;
   text-align: justify;
-  min-height: 400px;
   max-width: 380px;
-  color: #000000;
+  color: #000;
 }
 
-
+/* Barra de progresso*/
 .progressBarWrapper {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-top: 25px;
+  gap: 25px;
+  margin-top: 20px;
 }
 
 .progressBar {
-  width: 320px;
-  height: 18px;
+  width: 857px;
+  height: 42px;
   border-radius: 20px;
   background-color: #ddd;
   overflow: hidden;
@@ -176,16 +82,11 @@ html {
 
 .progressFill {
   height: 100%;
-  background: linear-gradient(to right, #91C4DD, #36A6DD, #105F89);
+  background: linear-gradient(to right, #36a6dd, #3499C2);
   transition: width 0.3s ease;
 }
 
 .navArrow {
-  width: 36px;
+  width: 80px;
   cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.navArrow:hover {
-  transform: scale(1.1);
 }

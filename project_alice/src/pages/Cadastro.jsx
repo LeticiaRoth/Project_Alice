@@ -1,6 +1,6 @@
 import React from "react";
 import InputField from "../components/Login-Cadastro/InputField";
-import ArrowButton from '../components/Login-Cadastro/ArrowButton';
+import ArrowButton from '../components/ArrowButton';
 import ContainerForm from "../components/Login-Cadastro/ContainerForm";
 
 import CoroaRainha from "../assets/Imagens/Cadastro/CoroaRainha.svg";
@@ -39,8 +39,8 @@ export default function Cadastro() {
     
     
     <ArrowButton 
-    text="Cadastar" 
-    onClick={() => alert("Cadastro realizado")} 
+    text="Entrar" 
+    to="/tutorial"
     />
     </ContainerForm>
     </div>

@@ -10,7 +10,7 @@ import BuleCha from "../assets/imagens/login/buleCha.svg";
 
 
 // importando botão 'Entrar'
-import ArrowButton from '../components/Login-Cadastro/ArrowButton';
+import ArrowButton from '../components/ArrowButton';
 import "../styles/Login.css";
 
 export default function Login() {

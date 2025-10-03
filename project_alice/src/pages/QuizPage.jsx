@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from '../components/NavbarTwo';
 import QuestionCard from "../components/QuizPage/QuestionCard";
+import ModalCongratulations from '../components/QuizPage/ModalCongratulations';
 import rabbitImg from '../assets/Imagens/QuizPage/WhiteRabbit.svg';
 import clockImg from '../assets/Imagens/QuizPage/Clock.svg';
 import rightButton from '../assets/Imagens/QuizPage/ImageButtonAvancar.svg';
@@ -21,44 +22,40 @@ const questions = [
 
 export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  
+  const [showModal, setShowModal] = useState(false);
+
   const handleAnswer = (answer) => {
     console.log("Resposta escolhida:", answer);
-  };
-  
-  const nextQuestion = () => {
-    if (currentQuestion < questions.length - 1) {
+
+    // se for a última pergunta, mostra modal
+    if (currentQuestion === questions.length - 1) {
+      setShowModal(true);
+    } else {
       setCurrentQuestion(currentQuestion + 1);
     }
   };
-  
+
   return (
     <div>
-    <Navbar bgColor="bgPurple" />
+      <Navbar bgColor="bgPurple" />
 
-    <div className="quizContainer">
-    {/* Coelho à esquerda */}
-    <img src={rabbitImg} alt="Coelho" className="coelhoImg" />
-    
-    {/* Card com relógio embutido */}
-    <QuestionCard
-    questionNumber={questions[currentQuestion].number}
-    questionText={questions[currentQuestion].text}
-    answers={questions[currentQuestion].answers}
-    onAnswer={handleAnswer}
-    clockImg={clockImg}
-    />
-    
-    {/* Botão avançar à direita */}
-    {currentQuestion !== 1 && (
-      <img 
-      src={rightButton} 
-      alt="Botão próximo" 
-      className="nextButton" 
-      onClick={nextQuestion} 
-      />
-    )}
-    </div>
+      <div className="quizContainer">
+        <img src={rabbitImg} alt="Coelho" className="coelhoImg" />
+
+        {/* Se não terminou, mostra pergunta */}
+        {!showModal && (
+          <QuestionCard
+            questionNumber={questions[currentQuestion].number}
+            questionText={questions[currentQuestion].text}
+            answers={questions[currentQuestion].answers}
+            onAnswer={handleAnswer}
+            clockImg={clockImg}
+          />
+        )}
+
+        {/* Modal de parabéns */}
+        {showModal && <ModalCongratulations onClose={() => setShowModal(false)} />}
+      </div>
     </div>
   );
 }
