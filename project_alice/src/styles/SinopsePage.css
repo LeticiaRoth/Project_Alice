@@ -1,157 +1,152 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html, #root {
-  height: 100%;
-  font-family: Arial, sans-serif;
-  background-color: #DAEAEE;
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
-/* Fundo */
 .backgroundImage {
   position: fixed;
-  top: 10vh;
+  top: 13%;
   left: 0;
   width: 100%;
   height: auto;
   z-index: 0;
 }
 
-/* Container principal */
-.appContainer {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
-
-/* Cabeçalho */
-.header {
-  background: linear-gradient(to right, #66b2ff, #0066cc);
-  padding: 10px;
-  font-size: 1.3rem;
-  color: white;
-  z-index: 2;
-}
-
-.navMenu ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.navMenu li {
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Conteúdo principal */
-.contentWrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 40px;
-  padding: 40px;
+.containerSinopse {
   position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #DAEAEE;
+  overflow: hidden; 
+  position: fixed;
+}
+
+.contentWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   z-index: 1;
 }
 
-/* Alice */
 .aliceImage {
-  width: 55vh;  
+  position: absolute;
+  left: 0;          
+  bottom: 100px;            
+  width: 462px;
   height: auto;
-  position: relative;
-  left: 8vw;
-}
-
-/* Livro */
-.bookOpen {
-  width: 60vh;    
-  height: auto;
-  position: relative;
-  left: 8vh;
   z-index: 10;
-  top: 25vh;
 }
 
-/* Sinopse */
-.synopsis {
-  background-color: #FFF8E8;
-  padding: 40px;
-  border-radius: 8px; 
-  width: 100%;       
-  max-width: 60vw; 
-  flex-shrink: 0;
-  position: relative;
-  right: 10%;
-  min-height: 80vh;
+.bookOpen {
+  position: absolute;
+  left: 440px;          
+  top: 350px;          
+  width: 500px;
+  height: auto;
+  z-index: 10;
 }
 
-.synopsis h2 {
-  font-size: 2.2rem;
-  margin-bottom: 2vh;
-  margin-left: 20%;
+.synopsisWrapper {
+  position: absolute;
+  right: 120px;     
+  top: 160px;        
+  width: 900px;     
+  min-height: 70vh;
+  display: flex;
+  align-items: stretch;
+  z-index: 4;
 }
 
-.synopsis h3 {
-  font-size: 1.5rem;
-  margin-bottom: 2vh;
-  margin-left: 20%;
+.synopsisStrip {
+  width: 160px;              
+  background-color: #FFF8E8;  
 }
 
-.synopsis p {
-  font-size: 0.8rem;
+.synopsisDivider {
+  width: 1.5px;            
+  background-color: #C2A36B;  
+}
+
+.synopsisBox {
+  flex: 1;                    
+  background-color: #FFF8E8;  
+  padding: 50px 30px;      
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.8rem;
+}
+
+.synopsisBox h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 20px 0;
+}
+
+.synopsisBox h3 {
+  font-size: 24px;
+  color: #0D525E;
+  margin: 0 0 32px 0;
+}
+
+.synopsisBox p {
+  font-size: 18px;       
   line-height: 1.6;
-  margin-left: 20%;
+  color: #000000;
   text-align: justify;
   white-space: pre-line;
-  overflow-wrap: break-word;
-  margin-right: 2vw;
+  max-width: 480px;       
 }
 
-/* Botões de navegação */
 .synopsis-controls {
   display: flex;
-  justify-content: center; 
+  justify-content: left;
   gap: 1rem;
-  flex-wrap: wrap;
-  position: fixed;     
-  bottom: 3vw;        
-  left: 70vw;           
-  transform: translateX(-50%); 
-  z-index: 1000;         
+  margin-top: 20%;
 }
 
 .synopsis-controls button {
-  background-color: #0077ff; 
-  color: white;              
+  background-color: #076B7A;
+  color: #fff;
   border: none;
-  border-radius: 8px;
-  padding: 0.8rem 1.6rem;
-  font-size: 1rem;
+  border-radius: 9px;
+  padding: 12px 14px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+  width: 160px;
+  transition: all 0.3s ease;
 }
 
 .synopsis-controls button:hover:not(:disabled) {
-  background-color: #005fcc;
-  transform: scale(1.05);   
+  background-color: #02899A;
 }
 
 .synopsis-controls button:disabled {
-  background-color: #cccccc; 
+  background-color: #929090;
   cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .aliceImage {
+    left: 2vw;
+    width: 260px;
+  }
+  
+  .bookOpen {
+    right: 35vw;
+    width: 300px;
+    top: 20vh;
+  }
+  
+  .synopsis {
+    right: 2vw;
+    width: 90%;
+    top: 5vh;
+  }
 }

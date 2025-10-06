@@ -19,9 +19,9 @@ import Griffo from "../assets/Imagens/CapitulosPage/Personagem/ImageGriffo.svg";
 import Vallete from "../assets/Imagens/CapitulosPage/Personagem/ImageVallete.svg";
 
 // Fundos
-import BgCoelho from "../assets/Imagens/CapitulosPage/BackgroundCard/BgCoelho.svg";
-import BgMacaneta from "../assets/Imagens/CapitulosPage/BackgroundCard/BgMacaneta.svg";
-import BgDodo from "../assets/Imagens/CapitulosPage/BackgroundCard/BgDodo.svg";
+// import BgCoelho from "../assets/Imagens/CapitulosPage/BackgroundCard/BgCoelho.svg";
+// import BgMacaneta from "../assets/Imagens/CapitulosPage/BackgroundCard/BgMacaneta.svg";
+// import BgDodo from "../assets/Imagens/CapitulosPage/BackgroundCard/BgDodo.svg";
 
 // Decorativos
 import CupsRightTop from "../assets/Imagens/CapitulosPage/Decor/CupsTopLeft.svg";
@@ -41,7 +41,7 @@ const CapitulosPage = () => {
       bgColor: "#fff8f0",
       borderColor: "#d8a97c",
       image: Coelho,
-      bgImage: BgCoelho,
+      // bgImage: BgCoelho,
     },
     {
       number: 2,
@@ -51,7 +51,7 @@ const CapitulosPage = () => {
       bgColor: "#e3f2fd",
       borderColor: "#2196f3",
       image: Macaneta,
-      bgImage: BgMacaneta,
+      // bgImage: BgMacaneta,
     },
     {
       number: 3,
@@ -62,7 +62,7 @@ const CapitulosPage = () => {
       bgColor: "#fde2f2",
       borderColor: "#e91e63",
       image: Dodo,
-      bgImage: BgDodo,
+      // bgImage: BgDodo,
     },
     {
       number: 4,

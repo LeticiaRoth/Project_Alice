@@ -11,8 +11,7 @@ const Footer = () => {
           <div className="footerCard">
             <h3>Sobre nós</h3>
             <p>
-              Um site que proporciona uma leitura imersiva e didática para todos os
-              apaixonados em livros e leitura.
+              Um site que proporciona uma leitura imersiva e didática para todos os apaixonados em livros e leitura. em livros e leitura.
             </p>
           </div>
           <div className="footerCard">
