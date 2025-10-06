@@ -1,51 +1,157 @@
-.sinopsePage {
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #DAEAEE;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/* Fundo */
+.backgroundImage {
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+/* Container principal */
+.appContainer {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  background-size: cover;
-  background-position: center;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
-.homeContainer {
+/* Cabeçalho */
+.header {
+  background: linear-gradient(to right, #66b2ff, #0066cc);
+  padding: 10px;
+  font-size: 1.3rem;
+  color: white;
+  z-index: 2;
+}
+
+.navMenu ul {
+  list-style: none;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-.synopsisContainer {
-  max-width: 550px;
-  padding: 20px;
-  background-color: rgba(255, 250, 242, 100%);
-  border-radius: 8px;
-  top: -900px;
-}
-
-.synopsisTitle {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.synopsisBookTitle {
-  font-size: 18px;
-  font-weight: bold;
-  color: #0073b1;
-  margin-bottom: 20px;
-}
-
-.synopsisContent {
-  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 20px;
+}
+
+.navMenu li {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Conteúdo principal */
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  position: relative;
+  z-index: 1;
 }
 
-.bookImage {
-  width: 180px;
-  border: 2px solid #444;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+/* Alice */
+.aliceImage {
+  width: 55vh;  
+  height: auto;
+  position: relative;
+  left: 8vw;
 }
 
-.synopsisText {
-  font-size: 16px;
+/* Livro */
+.bookOpen {
+  width: 60vh;    
+  height: auto;
+  position: relative;
+  left: 8vh;
+  z-index: 10;
+  top: 25vh;
+}
+
+/* Sinopse */
+.synopsis {
+  background-color: #FFF8E8;
+  padding: 40px;
+  border-radius: 8px; 
+  width: 100%;       
+  max-width: 60vw; 
+  flex-shrink: 0;
+  position: relative;
+  right: 10%;
+  min-height: 80vh;
+}
+
+.synopsis h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2vh;
+  margin-left: 20%;
+}
+
+.synopsis h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2vh;
+  margin-left: 20%;
+}
+
+.synopsis p {
+  font-size: 0.8rem;
   line-height: 1.6;
+  margin-left: 20%;
   text-align: justify;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+  margin-right: 2vw;
+}
+
+/* Botões de navegação */
+.synopsis-controls {
+  display: flex;
+  justify-content: center; 
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: fixed;     
+  bottom: 3vw;        
+  left: 70vw;           
+  transform: translateX(-50%); 
+  z-index: 1000;         
+}
+
+.synopsis-controls button {
+  background-color: #0077ff; 
+  color: white;              
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.synopsis-controls button:hover:not(:disabled) {
+  background-color: #005fcc;
+  transform: scale(1.05);   
+}
+
+.synopsis-controls button:disabled {
+  background-color: #cccccc; 
+  cursor: not-allowed;
 }

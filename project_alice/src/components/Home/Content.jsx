@@ -24,7 +24,7 @@ const Content = () => {
       {/* Botões */}
       <div className="ctaButtons">
         <button className="ctaButton" onClick={handleLivro}>Ler Livro</button>
-        <button className="ctaButton">Ler Sinopse</button>
+        <button className="ctaButton" onClick={handleSinopse}>Ler Sinopse</button>
       </div>
 
       {/* Imagens */}
