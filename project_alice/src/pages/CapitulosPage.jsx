@@ -1,180 +1,69 @@
-import React from "react";
-import '../styles/CapitulosPage.css'
-import CapituloCard from "../components/Capitulos/CapituloCard";
+  import React from "react";
+  import "../styles/CapitulosPage.css";
+  import CapituloCard from "../components/Capitulos/CapituloCard";
+  import Navbar from "../components/Navbar";
 
-// importando navbar
-import Navbar from '../components/Navbar';
-// Personagens
-import Coelho from "../assets/Imagens/CapitulosPage/Personagem/ImageCoelho.svg";
-import Macaneta from "../assets/Imagens/CapitulosPage/Personagem/ImageMacaneta.svg";
-import Dodo from "../assets/Imagens/CapitulosPage/Personagem/ImageDodo.svg";
-import Abillio from "../assets/Imagens/CapitulosPage/Personagem/ImageAbillio.svg";
-import Lagarta from "../assets/Imagens/CapitulosPage/Personagem/ImageLagarta.svg";
-import Duquesa from "../assets/Imagens/CapitulosPage/Personagem/ImageDuquesa.svg";
-import ChapeleiroMaluco from "../assets/Imagens/CapitulosPage/Personagem/ImageChapeleiroMaluco.svg";
-import Alice from "../assets/Imagens/CapitulosPage/Personagem/ImageAlice.svg";
-import RainhaVermelha from "../assets/Imagens/CapitulosPage/Personagem/ImageRainhaVermelha.svg";
-import Jabuti from "../assets/Imagens/CapitulosPage/Personagem/ImageJabuti.svg";
-import Griffo from "../assets/Imagens/CapitulosPage/Personagem/ImageGriffo.svg";
-import Vallete from "../assets/Imagens/CapitulosPage/Personagem/ImageVallete.svg";
+  // Personagens
+  import Coelho from "../assets/Imagens/CapitulosPage/Personagem/ImageCoelho.svg";
+  import Macaneta from "../assets/Imagens/CapitulosPage/Personagem/ImageMacaneta.svg";
+  import Dodo from "../assets/Imagens/CapitulosPage/Personagem/ImageDodo.svg";
+  import Abillio from "../assets/Imagens/CapitulosPage/Personagem/ImageAbillio.svg";
+  import Lagarta from "../assets/Imagens/CapitulosPage/Personagem/ImageLagarta.svg";
+  import Duquesa from "../assets/Imagens/CapitulosPage/Personagem/ImageDuquesa.svg";
+  import ChapeleiroMaluco from "../assets/Imagens/CapitulosPage/Personagem/ImageChapeleiroMaluco.svg";
+  import Alice from "../assets/Imagens/CapitulosPage/Personagem/ImageAlice.svg";
+  import RainhaVermelha from "../assets/Imagens/CapitulosPage/Personagem/ImageRainhaVermelha.svg";
+  import Jabuti from "../assets/Imagens/CapitulosPage/Personagem/ImageJabuti.svg";
+  import Griffo from "../assets/Imagens/CapitulosPage/Personagem/ImageGriffo.svg";
+  import Vallete from "../assets/Imagens/CapitulosPage/Personagem/ImageVallete.svg";
 
-// Fundos
-// import BgCoelho from "../assets/Imagens/CapitulosPage/BackgroundCard/BgCoelho.svg";
-// import BgMacaneta from "../assets/Imagens/CapitulosPage/BackgroundCard/BgMacaneta.svg";
-// import BgDodo from "../assets/Imagens/CapitulosPage/BackgroundCard/BgDodo.svg";
+  // Fundos dos cards
+  import BgCapitulo1 from '../assets/Imagens/CapitulosPage/BackgroundCard/BgCapitulo1.svg';
+  import BgCapitulo2 from '../assets/Imagens/CapitulosPage/BackgroundCard/BgCapitulo2.svg';
+  import BgCapitulo3 from '../assets/Imagens/CapitulosPage/BackgroundCard/BgCapitulo3.svg';
+  import BgCapitulo4 from '../assets/Imagens/CapitulosPage/BackgroundCard/BgCapitulo4.svg';
+  import BgCapitulo5 from '../assets/Imagens/CapitulosPage/BackgroundCard/BgCapitulo5.svg';
+  import BgCapitulo6 from '../assets/Imagens/CapitulosPage/BackgroundCard/BgCapitulo6.svg';
+  import BgCapitulo7 from '../assets/Imagens/CapitulosPage/BackgroundCard/BgCapitulo7.svg';
+  import BgCapitulo8 from '../assets/Imagens/CapitulosPage/BackgroundCard/BgCapitulo8.svg';
+  import BgCapitulo9 from '../assets/Imagens/CapitulosPage/BackgroundCard/BgCapitulo9.svg';
+  import BgCapitulo10 from '../assets/Imagens/CapitulosPage/BackgroundCard/BgCapitulo10.svg';
+  import BgCapitulo11 from '../assets/Imagens/CapitulosPage/BackgroundCard/BgCapitulo11.svg';
+  import BgCapitulo12 from '../assets/Imagens/CapitulosPage/BackgroundCard/BgCapitulo12.svg';
 
-// Decorativos
-import CupsRightTop from "../assets/Imagens/CapitulosPage/Decor/CupsTopLeft.svg";
-import CupsRight from "../assets/Imagens/CapitulosPage/Decor/CupsTopRight.svg";
-import CupsBottom from "../assets/Imagens/CapitulosPage/Decor/CupsRight.svg";
-import CupsLeft from "../assets/Imagens/CapitulosPage/Decor/CupsLeft.svg";
-import CupsTopLeft from "../assets/Imagens/CapitulosPage/Decor/CupsBottomLeft.svg";
+  const CapitulosPage = () => {
+    const chapters = [
+      { number: 1, title: "DENTRO DA TOCA DO COELHO", buttonText: "LER", image: Coelho, bgImage: BgCapitulo1 },
+      { number: 2, title: "O LAGO DE LÁGRIMAS", buttonText: "LER", image: Macaneta, bgImage: BgCapitulo2 },
+      { number: 3, title: "UMA CORRIDA MALUCA", subtitle: "E UMA HISTÓRIA CAUDALOSA", buttonText: "LER", image: Dodo, bgImage: BgCapitulo3},
+      { number: 4, title: "BILL, A LARGATIXA-BALA", buttonText: "LER", image: Abillio, bgImage: BgCapitulo4 },
+      { number: 5, title: "CONSELHOS DE UMA TATURANA", buttonText: "LER", image: Lagarta, bgImage: BgCapitulo5 },
+      { number: 6, title: "PORCO E PIMENTA", buttonText: "LER", image: Duquesa, bgImage: BgCapitulo6 },
+      { number: 7, title: "UM CHÁ DAS CINCO MUITO LOUCO", buttonText: "LER", image: ChapeleiroMaluco, bgImage: BgCapitulo7 },
+      { number: 8, title: "O CROQUÊ DA RAINHA", buttonText: "LER", image: RainhaVermelha, bgImage: BgCapitulo8 },
+      { number: 9, title: "A HISTÓRIA DO JABUTI DE MENTIRA", buttonText: "LER", image: Jabuti, bgImage: BgCapitulo9 },
+      { number: 10, title: "A QUADRILHA DAS LAGOSTAS", buttonText: "LER", image: Griffo, bgImage: BgCapitulo10 },
+      { number: 11, title: "QUEM ROUBOU AS TORTAS?", buttonText: "LER", image: Vallete, bgImage: BgCapitulo11 },
+      { number: 12, title: "AS EVIDÊNCIAS DE ALICE", buttonText: "LER", image: Alice, bgImage: BgCapitulo12 },
+    ];
 
+    return (
+      <>
+        <Navbar bgColor="bgGreen" />
+        <div className="chaptersPage">
+          <header className="chaptersHeader">
+            <h2 className="titleChaptersPage">CAPÍTULOS</h2>
+            <p className="descriptionChaptersPage">Continue a história por aqui!!</p>
+          </header>
 
-const CapitulosPage = () => {
-  const chapters = [
-    {
-      number: 1,
-      title: "NO BURACO DO COELHO",
-      buttonText: "LER",
-      route: "/capitulo1",
-      bgColor: "#fff8f0",
-      borderColor: "#d8a97c",
-      image: Coelho,
-      // bgImage: BgCoelho,
-    },
-    {
-      number: 2,
-      title: "O LAGO DE LÁGRIMAS",
-      buttonText: "LER",
-      route: "/capitulo2",
-      bgColor: "#e3f2fd",
-      borderColor: "#2196f3",
-      image: Macaneta,
-      // bgImage: BgMacaneta,
-    },
-    {
-      number: 3,
-      title: "UMA CORRIDA MALUCA ",
-      subtitle: "UMA HISTÓRIA COLORIDA",
-      buttonText: "LER",
-      route: "/capitulo3",
-      bgColor: "#fde2f2",
-      borderColor: "#e91e63",
-      image: Dodo,
-      // bgImage: BgDodo,
-    },
-    {
-      number: 4,
-      title: "BILL, O LAGARTIXA-BILL",
-      buttonText: "LER",
-      route: "/capitulo4",
-      bgColor: "#e8f5e9",
-      borderColor: "#43a047",
-      image: Abillio,
-    },
-    {
-      number: 5,
-      title: "CONSELHOS DE UMA TATURANA",
-      buttonText: "LER",
-      route: "/capitulo5",
-      bgColor: "#e1f5fe",
-      borderColor: "#0288d1",
-      image: Lagarta,
-    },
-    {
-      number: 6,
-      title: "PORCO E PIMENTA",
-      buttonText: "LER",
-      route: "/capitulo6",
-      bgColor: "#ffebee",
-      borderColor: "#c62828",
-      image: Duquesa,
-    },
-    {
-      number: 7,
-      title: "UM CHÁ DAS CINCO MUITO LOUCO",
-      buttonText: "LER",
-      route: "/capitulo7",
-      bgColor: "#f3e5f5",
-      borderColor: "#8e24aa",
-      image: ChapeleiroMaluco,
-    },
-    {
-      number: 8,
-      title: "O CROCÔQUÊ DA RAINHA",
-      buttonText: "LER",
-      route: "/capitulo8",
-      bgColor: "#ffebee",
-      borderColor: "#ad1457",
-      image: RainhaVermelha,
-    },
-    {
-      number: 9,
-      title: "A HISTÓRIA DO JUÍZ DE MENTIRA",
-      buttonText: "LER",
-      route: "/capitulo9",
-      bgColor: "#fffde7",
-      borderColor: "#fbc02d",
-      image: Jabuti,
-    },
-    {
-      number: 10,
-      title: "A QUADRILHA DAS LAGOSTAS",
-      bgColor: "#fbe9e7",
-      borderColor: "#ef6c00",
-      image: Griffo, 
-    },
-    {
-      number: 11,
-      title: "QUEM ROUBOU AS TORTAS?",
-      bgColor: "#eceff1",
-      borderColor: "#607d8b",
-      image: Vallete,
-    },
-    {
-      number: 12,
-      title: "AS EVIDÊNCIAS DE ALICE",
-      buttonText: "LER",
-      route: "/capitulo12",
-      bgColor: "#e3f2fd",
-      borderColor: "#1976d2",
-      image: Alice,
-    },
-  ];
+          <div className="chaptersGrid">
+            {chapters.map((chapter, index) => (
+              <CapituloCard key={index} {...chapter} />
+            ))}
+          </div>
+        </div>
+      </>
+    );
+  };
 
-  return (
-    <>
-    <Navbar bgColor="bgGreen"/>
-    <div className="chaptersPage">
-      <header className="chaptersHeader">
-        <h2 className="titleChaptersPage">CAPÍTULOS</h2>
-        <p className="descriptionChaptersPage">Continue a história por aqui!!</p>
-      </header>
-
-      {/* Xícaras */}
-      <img src={CupsRightTop} alt="Cups" className="cupDecoration cup1" />
-      <img src={CupsRight} alt="Cups" className="cupDecoration cup2" />
-      <img src={CupsBottom} alt="Cups" className="cupDecoration cup3" />
-      <img src={CupsLeft} alt="Cups" className="cupDecoration cup4" />
-      <img src={CupsTopLeft} alt="Cups" className="cupDecoration cup5" />
-
-      {/* Outras decorações */}
-      {/* <img src={Feather} alt="Feather" className="decor decorFeather1" />
-      <img src={Feather} alt="Feather" className="decor decorFeather2" />
-      <img src={Shoe} alt="Shoe" className="decor decorShoe" />
-      <img src={Hat} alt="Hat" className="decor decorHat" />
-      <img src={Question} alt="Question" className="decor decorQuestion1" />
-      <img src={Question} alt="Question" className="decor decorQuestion2" /> */}
-
-      <div className="chaptersGrid">
-        {chapters.map((chapter, index) => (
-          <CapituloCard key={index} {...chapter} />
-        ))}
-      </div>
-    </div>
-    </>
-  );
-};
-
-export default CapitulosPage;
+  export default CapitulosPage;

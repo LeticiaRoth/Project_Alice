@@ -81,11 +81,13 @@ body, html {
 }
 
 .cardWrapper.rightAligned .cardHeading {
-  padding-right: 30px;
+  padding-right: 40px;
+  margin-bottom: 10px;
 }
 
 .cardWrapper.leftAligned .cardHeading {
   padding-left: 85px;
+  margin-bottom: 10px;
 }
 
 .cardWrapper.cardWrapper.leftAligned .cardText {
@@ -96,15 +98,15 @@ body, html {
   padding-right: 30px;
 } 
 
-.stepNumberWrapper.leftAligned { left: -8px; }
-.stepNumberWrapper.rightAligned { right: -8px; }
+.stepNumberWrapper.leftAligned { left: -50px; }
+.stepNumberWrapper.rightAligned { right: -50px; }
 .stepNumberImage { width: 142px; height: auto; }
 
 /* conteúdo do card */
 .cardContent {
   background-color: white;
   border-radius: 20px;
-  padding: 0 30px;
+  padding: 20px 30px;
   width: 640px;
   position: relative;
   line-height: 1.5;
@@ -115,11 +117,19 @@ body, html {
 .cardContent.rightAligned {
   border-left: none;
   text-align: left;
+  right: -50px;
+}
+
+.cardContent.leftAligned {
+  border-left: none;
+  text-align: left;
+  left: -50px;
 }
 
 .cardHeading {
   font-size: 30px;
   margin-bottom: -5px;
+  padding-right: 10px;
   font-weight: bold;
 }
 
@@ -135,7 +145,7 @@ body, html {
   max-height: 180px;
   max-width: 360px;
   cursor: pointer;
-  margin-left: 25rem;
+  margin-left: 380px;
   margin-bottom: 20px;
 }
 
@@ -152,13 +162,13 @@ body, html {
   cursor: pointer;
   border: none;
   font-size: 1em;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.2s ease-in-out;
 }
 
 .buttonEntrar .buttonText {
   margin-right: 4px;
 }
+
 .imageButtonEntrar {
   height: 18px;
   width: auto;
@@ -178,6 +188,7 @@ body, html {
   right: 5px;
   width: 180px;
   opacity: 1;
+  z-index: 10;
 }
 
 .questionMarkBottom {
@@ -185,4 +196,5 @@ body, html {
   left: -85px;
   width: 280px;
   opacity: 1;
+  z-index: 10;
 }
