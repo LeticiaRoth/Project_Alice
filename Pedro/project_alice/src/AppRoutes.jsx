@@ -27,7 +27,7 @@ export default function AppRoutes() {
             <Route path="/tutorial" element={<TutorialPage />} />
             <Route path="/paginaSelo" element={<SeloPage />} />
             <Route path="/paginaCapitulos" element={<CapitulosPage />}/>
-            <Route path="/paginaQuiz/:idQuiz" element={<QuizPage />}/>
+            <Route path="/paginaQuiz/:idCapitulo" element={<QuizPage />}/>
             <Route path="/paginaSinopse" element={<SinopsePage />}/>
             <Route path='/paginaCapitulos/:idCapitulo' element={<CapituloPage />}/>
 

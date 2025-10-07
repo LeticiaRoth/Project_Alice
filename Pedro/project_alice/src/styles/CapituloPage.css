@@ -1,152 +1,79 @@
-/* Página */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .chapterPage {
-  background-color: #fdfcf8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
-/* Títulos */
-.chapterSearchTitle {
-  font-size: 18px;
+/* Texto introdutório */
+.chapterIntro {
+  text-align: center;
+  margin: 10px 0 10px;
+  max-width: 700px;
+}
+
+.chapterIntro h4 {
+  font-size: 32px;
   font-weight: bold;
-  color: #333;
-  margin-top: 10px;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.5px;
+  color: #1e3726;
+  margin-bottom: 18px;
 }
 
-.chapterSearchSubtitle {
-  font-size: 13px;
+.chapterIntro p {
+  font-size: 28px;
   color: #555;
-  margin-bottom: 25px;
-  text-align: center;
-  max-width: 520px;
-  line-height: 1.4;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
-/* Personagem + Card */
-.chapterHero {
+/* Livro aberto */
+.bookWrapper {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 35px;
-  margin-bottom: 35px;
+  width: 1200px; 
+  max-width: 95%; 
+  height: 850px; 
+  margin-top: 50px;
+  background: url("../assets/Imagens/CapituloPage/ImageBookAberto.svg") no-repeat center top;
+  background-size: contain;
+  padding: 80px 100px;
 }
 
-.characterImage {
-  max-height: 260px;
-  width: auto;
-}
-
-/* Card Verde */
-.chapterCard {
-  background-color: #fff;
-  border: 2px solid #2d9c41;
-  border-radius: 12px;
-  padding: 22px 20px;
-  width: 360px;
-  text-align: left;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
-}
-
-.chapterCard h4 {
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 3px;
-}
-
-.chapterCard p {
-  font-size: 13px;
-  text-align: center;
-  margin-bottom: 15px;
-  color: #444;
-  font-style: italic;
-}
-
-.chapterCard label {
-  display: block;
-  font-size: 14px;
-  margin: 10px 0 4px;
-  font-weight: 600;
-  color: #a32d2d;
-}
-
-.chapterCard input {
-  width: 100%;
-  padding: 7px 9px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 6px;
-  font-size: 14px;
-}
-
-.chapterCard span {
-  display: block;
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 12px;
-  font-weight: bold;
-  text-align: right;
-}
-
-/* Textos */
 .chapterTexts {
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin: 0 auto 25px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 60px;
 }
 
 .chapterTextBox {
   flex: 1;
-  background-color: #fff;
-  border: 2px solid #d6bfa2;
-  border-radius: 12px;
-  padding: 18px;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 24px;
+  line-height: 1.7;
   text-align: justify;
-  min-height: 280px;
-  max-width: 330px;
-  color: #333;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  max-width: 450px;
+  color: #000;
 }
 
-/* Navegação inferior */
-.chapterNavigation {
+/* Barra de progresso*/
+.progressBarWrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 25px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-.navButton {
-  background-color: #2c8c42;
-  color: white;
-  font-size: 22px;
-  padding: 8px 14px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-weight: bold;
-  border: none;
-  transition: background 0.2s;
-}
-
-.navButton:hover {
-  background-color: #256e36;
-}
-
-/* Barra de progresso */
 .progressBar {
-  width: 200px;
-  height: 18px;
+  width: 857px;
+  height: 42px;
   border-radius: 20px;
   background-color: #ddd;
   overflow: hidden;
@@ -155,40 +82,11 @@
 
 .progressFill {
   height: 100%;
-  width: 40%; /* Ajustar conforme capítulo */
-  background: linear-gradient(to right, #91C4DD, #36A6DD, #105F89);
+  background: linear-gradient(to right, #36a6dd, #3499C2);
+  transition: width 0.3s ease;
 }
 
-/* Wrapper que centraliza o conjunto imagem + card */
-.chapterHeroWrapper {
-  display: flex;
-  justify-content: center; /* centraliza o conjunto na página */
-  width: 100%;
-  margin-bottom: 35px;
-}
-
-/* Container da imagem e card lado a lado */
-.chapterHero {
-  display: flex;
-  justify-content: flex-start; /* alinha imagem e card à esquerda dentro do wrapper */
-  align-items: flex-start;
-  gap: 35px;
-  max-width: 800px; /* ajuste conforme necessário */
-  width: 100%;
-}
-
-.characterImage {
-  max-height: 260px;
-  width: auto;
-  flex-shrink: 0; /* garante que a imagem não encolha */
-}
-
-.chapterCard {
-  background-color: #fff;
-  border: 2px solid #2d9c41;
-  border-radius: 12px;
-  padding: 22px 20px;
-  width: 360px;
-  text-align: left;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+.navArrow {
+  width: 80px;
+  cursor: pointer;
 }

@@ -4,10 +4,10 @@ import axios from 'axios'; // Novo
 import { useAuth } from '../context/AuthContext.jsx'; // Novo
 import Navbar from '../components/Navbar';
 import QuestionCard from "../components/QuizPage/QuestionCard";
-//import ModalCongratulations from '../components/QuizPage/ModalCongratulations'; // Descomentado para uso
-//import rabbitImg from '../assets/Imagens/QuizPage/WhiteRabbit.svg'; // Descomentado
-//import clockImg from '../assets/Imagens/QuizPage/Clock.svg'; // Descomentado
-// import rightButton from '../assets/Imagens/QuizPage/ImageButtonAvancar.svg';
+import ModalCongratulations from '../components/QuizPage/ModalCongratulations'; // Descomentado para uso
+import rabbitImg from '../assets/Imagens/QuizPage/WhiteRabbit.svg'; // Descomentado
+import clockImg from '../assets/Imagens/QuizPage/Clock.svg'; // Descomentado
+//import rightButton from '../assets/Imagens/QuizPage/ImageButtonAvancar.svg';
 import '../styles/QuizPage.css';
 
 const API_URL = 'http://localhost:8090'; // Novo: Para a API
@@ -29,7 +29,11 @@ export default function QuizPage() {
   // --- BUSCA DAS PERGUNTAS NA API ---
   useEffect(() => {
     const fetchQuizQuestions = async () => {
-      if (!token || !idCapitulo) return;
+      if (!token || !idCapitulo) {
+          console.log(`Token ou ID do Capítulo faltando. Parando a busca. ${idCapitulo}, ${token}`);
+          setLoading(false); // Sai do estado de carregamento mesmo sem dados
+          return;
+      }
 
       try {
         const response = await axios.get(`${API_URL}/pergunta/capitulo/${idCapitulo}`, {

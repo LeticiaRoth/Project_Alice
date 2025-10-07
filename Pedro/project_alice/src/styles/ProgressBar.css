@@ -2,13 +2,13 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  width: 300px;
+  width: 628px;
   margin: 20px auto;
 }
 
 .navArrow {
-  width: 30px;
-  height: 30px;
+  width: 94px;
+  height: 89px;
   cursor: pointer;
 }
 
@@ -16,9 +16,9 @@
   flex: 1;
   height: 14px;
   border-radius: 10px;
-  background-color: #ddd;
+  background-color: #D9D9D9;
   overflow: hidden;
-  border: 1px solid #aaa;
+  border: 1px solid #807f7f;
 }
 
 .progressFill {

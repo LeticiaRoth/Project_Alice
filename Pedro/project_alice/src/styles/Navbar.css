@@ -1,26 +1,37 @@
 .navbarContainer {
   width: auto;
-  height: 81px;
-  background: linear-gradient(to right, #91C4DD, #36A6DD, #105F89);
+  height: 107px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 40px;
 }
 
+.bgBlue {
+  background: linear-gradient(to right, #91C4DD, #36A6DD, #105F89);
+}
+
+.bgPurple {
+  background: linear-gradient(to right, #F0B4DE, #961876, #731B63);
+}
+
+.bgGreen {
+  background: linear-gradient(to right, #B6D1A0, #4B6B28, #154D12);
+}
+
 .navbarLinks {
-  display: flex;
   gap: 60px;
 }
 
 .navLink {
-  color: white;
+  color: #ffffff;
   font-size: 32px;
   font-weight: 500;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
+  padding-right: 60px;
 }
 
-.navLink:hover {
+.navLink:hover{
   text-decoration: underline;
 }

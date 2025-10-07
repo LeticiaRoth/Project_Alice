@@ -1,127 +1,112 @@
-/* Reset e base */
+/* ===== RESET ===== */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-/* ======= Cards ======= */
-.chapterCard {
-  position: relative;
-  width: 200px;
-  height: 160px;
-  border: 2px solid;
-  border-radius: 12px;
-  padding: 10px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-size: cover;
-  background-position: center;
-}
-
-.chapterImage {
-  position: absolute;
-  top: -65px;
-  left: -30px;
-  width: 100px;
-  height: auto;
-  pointer-events: none;
-}
-
-.chapterTitle {
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 30px;
-}
-
-.chapterSubtitle {
-  font-size: 13px;
-  margin: 5px 0;
-}
-
-.chapterDescription {
-  font-size: 12px;
-  color: #555;
-}
-
-.chapterButton {
-  margin-top: 10px;
-  padding: 5px 12px;
-  background-color: var(--button-color, #f06292);
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 12px;
-  transition: 0.3s ease;
-}
-
-.chapterButton:hover {
-  opacity: 0.9;
-}
-
-/* ======= Página ======= */
+/* ===== BASE ===== */
 .chaptersPage {
+  background-color: #F5FFF6;
   min-height: 100vh;
-  background-color: #f7fff9;
-  padding: 20px;
-  position: relative; /* necessário p/ posicionar decorativos */
+  padding: 60px 0 100px 0;
+  position: relative;
   overflow: hidden;
 }
 
 .chaptersHeader {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
-.chaptersHeader h2 {
-  font-size: 28px;
-  font-weight: bold;
+.titleChaptersPage {
   color: #285217;
+  font-size: 65px;
+  margin-bottom: 15px;
 }
 
-.chaptersHeader p {
-  font-size: 18px;
+.descriptionChaptersPage {
   color: #447132;
+  font-size: 32px;
+  margin-top: 0;
 }
 
+/* ===== GRID ===== */
 .chaptersGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 60px 50px;
   justify-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* ======= Xícaras ======= */
-.cupDecoration {
-  position: absolute;
-  width: 55px;
-  opacity: 0.95;
+/* ===== CARD ===== */
+.chapterCard {
+  position: relative;
+  width: 282px;
+  height: 250px;
+  border-radius: 25px;
+  text-align: center;
+  overflow: hidden;
 }
 
-.cup1 { top: 80px; left: 30px; transform: rotate(-15deg); }
-.cup2 { top: 80px; right: 40px; transform: rotate(20deg); }
-.cup3 { top: 280px; right: 20px; transform: rotate(-25deg); }
-.cup4 { top: 380px; left: 40px; transform: rotate(30deg); }
-.cup5 { bottom: 100px; left: 50px; transform: rotate(-20deg); }
-.cup6 { bottom: 70px; right: 70px; transform: rotate(15deg); }
+/* ===== TEXTO ===== */
+.chapterTitle {
+  font-size: 15px;
+  color: #333;
+  margin-top: 160px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-.decor {
+.chapterSubtitle {
+  font-size: 13px;
+  color: #444;
+  margin: 5px 0 2px;
+}
+
+.chapterDescription {
+  font-size: 12px;
+  color: #777;
+}
+
+/* ===== BOTÃO ===== */
+.chapterButton {
+  background-color: #FF6B81;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 22px;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chapterButton:hover {
+  background-color: #e45a70;
+  transform: scale(1.05);
+}
+
+/* ===== IMAGENS PERSONAGENS ===== */
+.chapterImage {
   position: absolute;
   pointer-events: none;
 }
 
-/* penas */
-.decorFeather1 { top: 250px; right: 90px; width: 65px; transform: rotate(15deg); }
-.decorFeather2 { bottom: 180px; left: 100px; width: 65px; transform: rotate(-25deg); }
-
-/* chapéu */
-.decorHat { bottom: 250px; left: 70px; width: 80px; transform: rotate(-10deg); }
-
-/* sapato */
-.decorShoe { bottom: 140px; right: 120px; width: 75px; transform: rotate(15deg); }
-
-/* pontos de interrogação */
-.decorQuestion1 { top: 200px; left: 220px; width: 70px; }
-.decorQuestion2 { top: 200px; right: 220px; width: 70px; }
+/* ===== POSIÇÕES INDIVIDUAIS ===== */
+.img-1 { width: 120px; top: -25px; left: -25px; transform: rotate(-5deg); }
+.img-2 { width: 100px; top: -15px; right: 15px; transform: rotate(10deg); }
+.img-3 { width: 110px; top: -45px; right: -10px; transform: rotate(5deg); z-index: 10;}
+.img-4 { width: 120px; top: -20px; left: 10px; transform: rotate(-8deg); }
+.img-5 { width: 130px; top: -30px; left: 60px; transform: rotate(3deg); }
+.img-6 { width: 120px; top: -35px; right: -10px; transform: rotate(5deg); }
+.img-7 { width: 130px; top: -25px; left: 0px; transform: rotate(-5deg); }
+.img-8 { width: 130px; top: -30px; right: -15px; transform: rotate(8deg); }
+.img-9 { width: 130px; top: -25px; right: 15px; transform: rotate(5deg); }
+.img-10 { width: 130px; top: -35px; left: 20px; transform: rotate(-10deg); }
+.img-11 { width: 130px; top: -30px; right: 20px; transform: rotate(3deg); }
+.img-12 { width: 130px; top: -35px; left: 65px; transform: rotate(0deg); }

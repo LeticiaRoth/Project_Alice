@@ -7,7 +7,7 @@ import pdfplumber
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="senai",
+    password="1234",
     database="chapeleiro"
 )
 cursor = conn.cursor()

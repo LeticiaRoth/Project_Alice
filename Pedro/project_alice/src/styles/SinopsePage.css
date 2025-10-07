@@ -1,55 +1,152 @@
-.sinopsePage {
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.homeContainer {
+.backgroundImage {
+  position: fixed;
+  top: 13%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+.containerSinopse {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #DAEAEE;
+  overflow: hidden; 
+  position: fixed;
+}
+
+.contentWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+.aliceImage {
+  position: absolute;
+  left: 0;          
+  bottom: 100px;            
+  width: 462px;
+  height: auto;
+  z-index: 10;
+}
+
+.bookOpen {
+  position: absolute;
+  left: 440px;          
+  top: 350px;          
+  width: 500px;
+  height: auto;
+  z-index: 10;
+}
+
+.synopsisWrapper {
+  position: absolute;
+  right: 120px;     
+  top: 160px;        
+  width: 900px;     
+  min-height: 70vh;
+  display: flex;
+  align-items: stretch;
+  z-index: 4;
+}
+
+.synopsisStrip {
+  width: 160px;              
+  background-color: #FFF8E8;  
+}
+
+.synopsisDivider {
+  width: 1.5px;            
+  background-color: #C2A36B;  
+}
+
+.synopsisBox {
+  flex: 1;                    
+  background-color: #FFF8E8;  
+  padding: 50px 30px;      
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-  padding: 120px 60px; /* espaço por causa da navbar */
-  gap: 40px;
+  gap: 0.8rem;
 }
 
-.characterImage {
-  max-height: 450px;
+.synopsisBox h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 20px 0;
 }
 
-.synopsisContainer {
-  max-width: 550px;
-  padding: 20px;
-  background-color: rgba(255, 250, 242, 0.9);
-  border-radius: 8px;
+.synopsisBox h3 {
+  font-size: 24px;
+  color: #0D525E;
+  margin: 0 0 32px 0;
 }
 
-.synopsisTitle {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.synopsisBookTitle {
-  font-size: 18px;
-  font-weight: bold;
-  color: #0073b1;
-  margin-bottom: 20px;
-}
-
-.synopsisContent {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.bookImage {
-  width: 180px;
-  border: 2px solid #444;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-}
-
-.synopsisText {
-  font-size: 16px;
+.synopsisBox p {
+  font-size: 18px;       
   line-height: 1.6;
+  color: #000000;
   text-align: justify;
+  white-space: pre-line;
+  max-width: 480px;       
+}
+
+.synopsis-controls {
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+  margin-top: 20%;
+}
+
+.synopsis-controls button {
+  background-color: #076B7A;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 160px;
+  transition: all 0.3s ease;
+}
+
+.synopsis-controls button:hover:not(:disabled) {
+  background-color: #02899A;
+}
+
+.synopsis-controls button:disabled {
+  background-color: #929090;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .aliceImage {
+    left: 2vw;
+    width: 260px;
+  }
+  
+  .bookOpen {
+    right: 35vw;
+    width: 300px;
+    top: 20vh;
+  }
+  
+  .synopsis {
+    right: 2vw;
+    width: 90%;
+    top: 5vh;
+  }
 }
