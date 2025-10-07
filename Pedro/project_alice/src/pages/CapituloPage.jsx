@@ -87,53 +87,71 @@ function CapituloPage() {
     fetchPages();
   }, [idCapitulo, token]);
 
-  // ----------------------------------------------------
-  // 2. Lógica de Atualização de Progresso (Ao Concluir) (Mantida)
-  // ----------------------------------------------------
-  const handleConcluirCapitulo = async () => {
-    if (isConcluido || !token) return; 
 
-    try {
-        await axios.patch(`${API_URL}/usercapitulo/concluir`, 
-            { idCapitulo: parseInt(idCapitulo) }, 
-            { 
-                headers: { 
-                    Authorization: `Bearer ${token}`, 
-                    'Content-Type': 'application/json' 
-                } 
-            }
-        );
-        setIsConcluido(true);
-        alert("Capítulo concluído! Você desbloqueou o próximo.");
-        navigate('/paginaCapitulos'); 
+  // const handleConcluirCapitulo = async () => {
+  //   if (isConcluido || !token) return; 
+
+  //   try {
+  //       await axios.patch(`${API_URL}/usercapitulo/concluir`, 
+  //           { idCapitulo: parseInt(idCapitulo) }, 
+  //           { 
+  //               headers: { 
+  //                   Authorization: `Bearer ${token}`, 
+  //                   'Content-Type': 'application/json' 
+  //               } 
+  //           }
+  //       );
+  //       setIsConcluido(true);
+  //       alert("Capítulo concluído! Você desbloqueou o próximo.");
+  //       navigate('/paginaCapitulos'); 
         
-    } catch (err) {
-        console.error("Erro ao concluir capítulo:", err);
-        alert("Falha ao registrar conclusão. Tente novamente.");
-    }
-  };
+  //   } catch (err) {
+  //       console.error("Erro ao concluir capítulo:", err);
+  //       alert("Falha ao registrar conclusão. Tente novamente.");
+  //   }
+  // };
 
 
-  // ----------------------------------------------------
-  // 3. Funções de Navegação de Páginas (Mantida)
-  // ----------------------------------------------------
-  const goToNextPage = () => {
-    if (currentPageIndex < totalPages - 1) {
-      setCurrentPageIndex(currentPageIndex + 1);
-    } else {
-      handleConcluirCapitulo();
-    }
-  };
+  // const goToNextPage = () => {
+  //   if (currentPageIndex < totalPages - 1) {
+  //     setCurrentPageIndex(currentPageIndex + 1);
+  //   } else {
+  //     handleConcluirCapitulo();
+  //   }
+  // };
 
-  const goToPrevPage = () => {
-    if (currentPageIndex > 0) {
-      setCurrentPageIndex(currentPageIndex - 1);
-    }
-  };
+  // const goToPrevPage = () => {
+  //   if (currentPageIndex > 0) {
+  //     setCurrentPageIndex(currentPageIndex - 1);
+  //   }
+  // };
 
-  // ----------------------------------------------------
-  // 4. Formatação de Texto com Destaque (NOVO)
-  // ----------------------------------------------------
+
+  // 2. Lógica de Atualização de Progresso (Ao Concluir) (Mantida, mas não chamada mais diretamente aqui)
+const handleConcluirCapitulo = async () => {
+  // Esta função não será mais chamada aqui, mas sim na QuizPage.
+  // Você pode mantê-la ou removê-la daqui se não for usada.
+  // ... (código existente)
+};
+
+
+// 3. Funções de Navegação de Páginas (ALTERADO)
+const goToNextPage = () => {
+  if (currentPageIndex < totalPages - 1) {
+    setCurrentPageIndex(currentPageIndex + 1);
+  } else {
+    // REDIRECIONA PARA A PÁGINA DO QUIZ ao invés de concluir
+    navigate(`/paginaQuiz/${idCapitulo}`); // Assumindo que a rota será '/quiz/:idCapitulo'
+  }
+};
+
+const goToPrevPage = () => {
+  if (currentPageIndex > 0) {
+    setCurrentPageIndex(currentPageIndex - 1);
+  }
+};
+
+
   const highlightedText = useMemo(() => {
     if (!currentText) return null;
     
@@ -249,7 +267,7 @@ function CapituloPage() {
           Página Anterior
         </button>
         <button onClick={goToNextPage}>
-          {currentPageIndex === totalPages - 1 ? 'Finalizar Capítulo' : 'Próxima Página'}
+          {currentPageIndex === totalPages - 1 ? 'Ir para o quiz' : 'Próxima Página'}
         </button>
       </div>
       

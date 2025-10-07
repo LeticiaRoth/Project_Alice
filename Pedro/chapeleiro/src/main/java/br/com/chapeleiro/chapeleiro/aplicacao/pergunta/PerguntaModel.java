@@ -27,7 +27,7 @@ public class PerguntaModel {
     private String alternativa3;
     @Column(name = "alternativa4")
     private String alternativa4;
-    @Column(name = "reposta_correta")
+    @Column(name = "resposta_correta")
     private String respostaCorreta;
 
     public PerguntaModel() {

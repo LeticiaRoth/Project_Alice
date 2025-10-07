@@ -29,17 +29,8 @@ public class UserCapituloController {
     @Autowired
     CapituloRepository capituloRepository;
 
-    // 🚨 ADIÇÃO 1: Injeção do TokenService
     @Autowired
     TokenService tokenService;
-
-    // 🚨 ADIÇÃO 2: Definição do DTO de Ação (ou use seu DTO existente)
-    // Usaremos seu UserCapituloDto existente, mas este é um bom padrão:
-    // public record CapituloActionDTO(Integer idCapitulo) {}
-
-    // ----------------------------------------------------------------------------------------------------
-    // ROTAS EXISTENTES (GET, GET/{id}, GET/capitulo/{id}, GET/user/{id})
-    // ----------------------------------------------------------------------------------------------------
 
     @GetMapping
     public ResponseEntity getAll(){
@@ -56,7 +47,6 @@ public class UserCapituloController {
         return ResponseEntity.status(HttpStatus.FOUND).body(userCapitulo.get());
     }
 
-    // Filtro por Capitulo
     @GetMapping("/capitulo/{idCapitulo}")
     public ResponseEntity getByCapitulo(@PathVariable(value = "idCapitulo") Integer idCapitulo) {
         Optional<CapituloModel> wp = capituloRepository.findById(idCapitulo);
@@ -67,7 +57,6 @@ public class UserCapituloController {
         return ResponseEntity.status(HttpStatus.OK).body(userCapitulos);
     }
 
-    // Filtro por User
     @GetMapping("/user/{id_user}")
     public ResponseEntity getByUser(@PathVariable(value = "id_user") Integer idUser) {
         Optional<UserModel> user = userRepository.findById(idUser);
@@ -78,9 +67,6 @@ public class UserCapituloController {
         return ResponseEntity.status(HttpStatus.OK).body(userCapitulos);
     }
 
-    // ----------------------------------------------------------------------------------------------------
-    // 🚨 ADIÇÃO 3: ENDPOINT PARA O PROGRESSO DO USUÁRIO LOGADO (GET /usercapitulo/me)
-    // ----------------------------------------------------------------------------------------------------
     @GetMapping("/me")
     public ResponseEntity getMeuProgresso(@RequestHeader(name = "Authorization") String authorizationHeader) {
         String token = tokenService.extractToken(authorizationHeader);
@@ -95,14 +81,10 @@ public class UserCapituloController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuário não encontrado.");
         }
 
-        // Retorna a lista de progresso do usuário encontrado pelo token
         List<UserCapituloModel> userCapitulos = repository.findByUser(user.get());
         return ResponseEntity.status(HttpStatus.OK).body(userCapitulos);
     }
 
-    // ----------------------------------------------------------------------------------------------------
-    // 🚨 ADIÇÃO 4: ENDPOINT PARA MARCAR CAPÍTULO COMO CONCLUÍDO (PATCH /usercapitulo/concluir)
-    // ----------------------------------------------------------------------------------------------------
     @PatchMapping("/concluir")
     public ResponseEntity concluirCapitulo(
             @RequestHeader(name = "Authorization") String authorizationHeader,
@@ -122,7 +104,6 @@ public class UserCapituloController {
         }
         UserModel user = userOpt.get();
 
-        // 2. VERIFICAÇÃO: Obter o Capítulo (ID precisa estar no DTO)
         if (data.idCapitulo() == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("ID do Capítulo é obrigatório.");
         }
@@ -133,26 +114,18 @@ public class UserCapituloController {
         }
         CapituloModel capitulo = capituloOpt.get();
 
-        // 3. BUSCAR OU CRIAR O REGISTRO USER-CAPITULO
-        // NOTA: Requer um método findByUserAndCapitulo(UserModel, CapituloModel) no seu Repositório
         Optional<UserCapituloModel> userCapituloOpt = repository.findByUserAndCapitulo(user, capitulo);
         UserCapituloModel userCapitulo = userCapituloOpt.orElseGet(UserCapituloModel::new);
 
-        // 4. ATUALIZAÇÃO DO STATUS
         userCapitulo.setUser(user);
         userCapitulo.setCapitulo(capitulo);
         userCapitulo.setConcluidoUsuarioCapitulo(true); // Marca como concluído!
         userCapitulo.setProgressoUsuarioCapitulo(100);
 
-        // 5. SALVAR E RETORNAR
         repository.save(userCapitulo);
 
         return ResponseEntity.ok("Capítulo marcado como concluído.");
     }
-
-    // ----------------------------------------------------------------------------------------------------
-    // ROTAS EXISTENTES (POST, DELETE, PATCH/{id})
-    // ----------------------------------------------------------------------------------------------------
 
     @PostMapping
     public ResponseEntity save(@RequestBody UserCapituloDto userCapituloDto){
