@@ -1,0 +1,211 @@
+/* Reset e base */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.appContainer {
+  width: 100%;
+  min-height: 100vh;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+main {
+  flex: 1; 
+}
+
+/* Header */
+.headerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  max-width: 512px;
+  height: auto;
+}
+
+/* Hero Section */
+.heroSection {
+  display: flex;
+  align-items: center;
+  min-height: calc(140vh - 100px);
+  padding-left: 60px;
+  background-size: cover;      
+  background-position: center;  
+  background-repeat: no-repeat;
+}
+
+/* Conteúdo */
+.heroContent {
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+  margin-top: -440px;
+}
+
+.heroContent h1 {
+  color: #BE233A;
+  font-size: 65px;
+  text-align: left;
+  display: flex;
+  flex-direction: column; 
+  gap: 6px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.heroContent p {
+  font-size: 30px;
+  margin: 8px 0;
+  line-height: 1.5;
+  color: #BE233A;
+  text-align: left;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #7F1620;
+
+}
+
+.startButton {
+  margin-top: 30px;
+  background: #FF6663;
+  color: #ffffff;
+  border: none;
+  padding: 16px 26px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 255px;
+  height: auto;
+  transition: all 0.2s ease-in-out; 
+  margin-left: -450px;
+  text-transform: uppercase;
+}
+
+/* Imagem do cenário */
+.heroImage {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.heroImage img {
+  width: 100%;       
+  height: 100%;     
+  max-width: none;  
+  object-fit: cover;
+}
+
+/* Container principal do CTA */
+.callToAction {
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  background: #FFF4C8;
+  overflow: hidden;
+}
+
+.ctaButtons {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  z-index: 10;
+}
+
+.ctaButton {
+  width: 220px;
+  height: 60px;
+  background-color: #30C2E0;
+  
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+/* Cartas */
+.cheapImg {
+  position: absolute;
+  left: 4%; 
+  width: 430px;
+  height: auto;
+  transform: rotate(-15deg);
+  z-index: 5;
+}
+
+/* Alice */
+.aliceImg {
+  position: absolute;
+  right: 4%; 
+  width: 420px; 
+  height: auto;
+  z-index: 8;
+}
+
+/* Coelho Branco */
+.whiteRabbitImg {
+  position: absolute;
+  left: 8%; 
+  bottom: -5%; 
+  width: 450px;
+  height: auto;
+  z-index: 7;
+}
+
+/* Gato de Cheshire */
+.cheshireCatWrapper {
+  position: absolute;   
+  bottom: -2%;
+  right: -1%;
+  width: 375px;         
+  height: 325px;       
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cheshireBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;  
+  height: 100%;
+  background: 
+  linear-gradient(to left, #EFD2F7 80%, transparent 80%),
+  radial-gradient(circle at center, #EFD2F7 20%, transparent 70%);
+  filter: blur(100px);  filter: blur(120px);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.cheshireCatImg {
+  position: relative;  
+  width: 80%;         
+  height: auto;
+  z-index: 1;
+}

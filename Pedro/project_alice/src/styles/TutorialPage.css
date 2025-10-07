@@ -1,0 +1,188 @@
+/* Reset e base */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* fundo principal da tela */
+.tutorialBackground {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #076678;
+  overflow: hidden;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* blobs animados ao fundo */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.7;
+  animation-timing-function: ease-in-out;
+}
+.blob1 { width: 25vw; height: 25vw; background: #ef43d8; top: -5vw; left: -5vw; animation: liquidWave1 8s infinite alternate; }
+.blob2 { width: 25vw; height: 25vw; background: #FD32E2; bottom: -5vw; right: -5vw; animation: liquidWave2 7s infinite alternate; }
+.blob3 { width: 22vw; height: 22vw; background: #ef43d8; top: -3vw; right: -3vw; animation: liquidWave3 6s infinite alternate; }
+.blob4 { width: 18vw; height: 18vw; background: #FD32E2; bottom: -3vw; left: -3vw; animation: liquidWave4 9s infinite alternate; }
+.blob5 { width: 22vw; height: 22vw; background: #ef43d8; bottom: -2vw; left: 50%; transform: translateX(-50%); animation: liquidWaveBottom 6s infinite alternate; }
+
+/* animações com efeitos de 'líquido' */
+@keyframes liquidWave1 { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(2%,1%) scale(1.05);} 50%{transform:translate(0,2%) scale(1.1);} 75%{transform:translate(-2%,1%) scale(1.05);} }
+@keyframes liquidWave2 { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(-2%,-1.5%) scale(1.04);} 50%{transform:translate(0,-3%) scale(1.08);} 75%{transform:translate(2%,-1.5%) scale(1.04);} }
+@keyframes liquidWave3 { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(1.5%,1.5%) scale(1.03);} 50%{transform:translate(0,3%) scale(1.07);} 75%{transform:translate(-1.5%,1.5%) scale(1.03);} }
+@keyframes liquidWave4 { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(-1%,-1%) scale(1.02);} 50%{transform:translate(0,-2.5%) scale(1.05);} 75%{transform:translate(1%,-1%) scale(1.02);} }
+@keyframes liquidWaveBottom { 0%,100%{transform:translateX(-50%) translateY(0) scale(1);} 25%{transform:translateX(-50%) translateY(-1.5%) scale(1.05);} 50%{transform:translateX(-50%) translateY(-3%) scale(1.1);} 75%{transform:translateX(-50%) translateY(-1.5%) scale(1.05);} }
+
+/* container principal */
+.tutorialContainer {
+  position: relative;
+  z-index: 2;
+  background-color: #FBFEFF;
+  border-radius: 20px;
+  padding: 10px 70px 0 70px;
+  width: 840px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* títulos */
+.tutorialTitle { font-size: 65px; font-weight: bold; color: #247299; margin-bottom: 10px; text-transform: uppercase;}
+.tutorialSubtitle { font-size: 30px; color: #164B66; margin-bottom: 60px; }
+
+/* listas dos cards */
+.tutorialCardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* card */
+.cardWrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.cardWrapper.leftAligned { justify-content: flex-start; padding-left: 30px;}
+.cardWrapper.rightAligned { justify-content: flex-end; padding-right: 30px;}
+
+/* números do passo a passo */
+.stepNumberWrapper {
+  position: absolute;
+  top: 16%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.cardWrapper.rightAligned .cardHeading {
+  padding-right: 30px;
+}
+
+.cardWrapper.leftAligned .cardHeading {
+  padding-left: 85px;
+}
+
+.cardWrapper.cardWrapper.leftAligned .cardText {
+  padding-left: 85px;
+} 
+
+.cardWrapper.cardWrapper.rightAligned .cardText {
+  padding-right: 30px;
+} 
+
+.stepNumberWrapper.leftAligned { left: -8px; }
+.stepNumberWrapper.rightAligned { right: -8px; }
+.stepNumberImage { width: 142px; height: auto; }
+
+/* conteúdo do card */
+.cardContent {
+  background-color: white;
+  border-radius: 20px;
+  padding: 0 30px;
+  width: 640px;
+  position: relative;
+  line-height: 1.5;
+  box-shadow: 0 8px 20px var(--card-shadow-color);
+  text-align: left;
+}
+
+.cardContent.rightAligned {
+  border-left: none;
+  text-align: left;
+}
+
+.cardHeading {
+  font-size: 30px;
+  margin-bottom: -5px;
+  font-weight: bold;
+}
+
+.cardText {
+  font-size: 20px;
+  color: rgb(17, 17, 16, 74%);
+  margin-bottom: 20px;
+  width: 500px;
+}
+
+/* imgens dos botões 'Começar' e 'Entrar'*/
+.buttonCard {
+  max-height: 90px;
+  max-width: 290px;
+  cursor: pointer;
+  margin-left: 25rem;
+  margin-bottom: 20px;
+}
+
+.buttonEntrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  background: #5DB65D;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.buttonEntrar .buttonText {
+  margin-right: 4px;
+}
+.imageButtonEntrar {
+  height: 18px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* imagens dos pontos de interrogação */
+.questionMark {
+  position: absolute;
+  z-index: 0; 
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.questionMarkTop {
+  top: -50px;     
+  right: 5px;
+  width: 180px;
+  opacity: 1;
+}
+
+.questionMarkBottom {
+  bottom: -60px;   
+  left: -85px;
+  width: 280px;
+  opacity: 1;
+}
