@@ -1,11 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+// 1. Importar o hook personalizado para acessar o Contexto
+import { useAuth } from "../../context/AuthContext.jsx"; // Ajuste o caminho conforme sua estrutura de pastas
 
 function HeroContent() {
+    // 2. Usar o hook para obter o estado de autenticação
+    const { isAuthenticated } = useAuth();
     const navigate = useNavigate();
     
     const handleStart = () => {
-        navigate("/login");
+        // Lógica Condicional: Se está logado, vá para o conteúdo principal. Se não, vá para o login.
+        if (isAuthenticated) {
+            // Se logado: Redireciona para o conteúdo principal (ex: /book, /dashboard, /home)
+            navigate("/paginaCapitulos"); 
+        } else {
+            // Se não logado: Redireciona para a página de login
+            navigate("/login");
+        }
     };
 
     return (
@@ -22,7 +33,7 @@ function HeroContent() {
         </p>
         <p>Cuidado para não se perder na toca do coelho...</p>
         
-        <button className="startButton"  onClick={handleStart}>Começar</button>
+        <button className="startButton" onClick={handleStart}>Começar</button>
         </div>
     );
 }

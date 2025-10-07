@@ -13,7 +13,7 @@ function CapituloPage() {
   const [pages, setPages] = useState([]);
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [isConcluido, setIsConcluido] = useState(false);
+  const [isConcluido] = useState(false);
   const [error, setError] = useState(null);
 
   // --- HOOKS DE ESTADO DA BUSCA (INTEGRAÇÃO) ---
@@ -125,14 +125,6 @@ function CapituloPage() {
   //     setCurrentPageIndex(currentPageIndex - 1);
   //   }
   // };
-
-
-  // 2. Lógica de Atualização de Progresso (Ao Concluir) (Mantida, mas não chamada mais diretamente aqui)
-const handleConcluirCapitulo = async () => {
-  // Esta função não será mais chamada aqui, mas sim na QuizPage.
-  // Você pode mantê-la ou removê-la daqui se não for usada.
-  // ... (código existente)
-};
 
 
 // 3. Funções de Navegação de Páginas (ALTERADO)
