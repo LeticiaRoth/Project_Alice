@@ -23,12 +23,23 @@
   - Link de instalação: https://code.visualstudio.com/download
 
 ## Iniciando o projeto
-### MySQL
+### MySQL (Banco de dados)
   - Utilize o comando: create database chapeleiro;
 
-### Intellij
+### Intellij (Back-End)
   - Selecione a opção "Open Project" e abra a pasta "chapeleiro" que está no repositório do projeto
   - Abra o arquivo "application.properties" em: "src/main/resources/application.properties"
   - Confira se o usuário (spring.datasource.username=root) e a senha (spring.datasource.password=root) nas linhas 3 e 4 são os mesmos que você configurou no MySQL, se não for, altere-os para os mesmos que você configurou na criação de conexão do banco de dados
   - Agora abra o arquivo "ChapeleiroApplication" em: "src/main/java/br/com/chapeleiro/chapeleiro/ChapeleiroApplication.java" e inicialize ele
-  - Ele deu erro, mas não se preocupe, isso aconteceu por causa do Java. No Intellij aparecerá um alerta após a tentativa de inicialização pedindo para instalar o 
+  - Ele deu erro, mas não se preocupe, isso aconteceu por causa do Java. No Intellij aparecerá um alerta após a tentativa de inicialização pedindo para instalar o Java, com isso, acesse o alerta e siga os passos para a instalação do Java versão 25 através do Intellij.
+    - Agora abra o arquivo "ChapeleiroApplication" novamente em: "src/main/java/br/com/chapeleiro/chapeleiro/ChapeleiroApplication.java" e inicialize ele
+
+### Visual Studio Code (Pupulação)
+  - Abra a pasta "Population"
+  - Abra o terminal dentro desta pasta no VS Code
+  - Rode o comando: "py -m venv .venv"
+  - Rode o comando: ".\.venv\Scripts\activate"
+  - Rode o comando: "pip install -r requirements.txt"
+  - Analise o arquivo "script-linha.py" e confira se a linha 7 tem a senha do seu banco no "password="root"", caso necessário, altere-a
+  - Agora selecione o interpretador python da venv
+  - Rode o comando: "py script-linha.py"
