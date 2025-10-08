@@ -43,3 +43,11 @@
   - Analise o arquivo "script-linha.py" e confira se a linha 7 tem a senha do seu banco no "password="root"", caso necessário, altere-a
   - Agora selecione o interpretador python da venv
   - Rode o comando: "py script-linha.py"
+
+### Visual Studio Code (Front)
+  - Abra a pasta "project_alice"
+  - Abra o terminal dentro desta pasta no VS Code
+  - Rode o comando "npm install"
+  - Rode o comando "npm run dev"
+
+# Agora se divirta!!!
