@@ -181,21 +181,7 @@ const CapitulosPage = () => {
             image: Alice,
         },
     ];
-
-    if (loading) {
-        // Exibe um estado de carregamento enquanto busca a lista mestra de capítulos.
-        return (
-            <>
-                <Navbar bgColor="bgGreen" />
-                <div className="chaptersPage" style={{ textAlign: 'center', padding: '50px' }}>
-                    <h2>Carregando Capítulos...</h2>
-                    <p>Isso não depende mais do seu login.</p>
-                </div>
-            </>
-        );
-    }
-
-
+    
     return (
         <>
             <Navbar bgColor="bgGreen" />

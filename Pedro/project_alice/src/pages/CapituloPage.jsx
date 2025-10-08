@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Navbar from '../components/Navbar';
 // REMOVIDO: import { useAuth } from '../context/AuthContext.jsx'; // Não é mais necessário
 
 const API_URL = 'http://localhost:8090';
@@ -173,7 +174,9 @@ function CapituloPage() {
     
     
     return (
-        <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
+      <>
+        <Navbar bgColor="bgGreen" />
+         <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
             <h1>{currentPage.capitulo.nomeCapitulo}</h1>
             
             {/* --- ÁREA DE BUSCA (INTEGRAÇÃO) --- */}
@@ -246,6 +249,7 @@ function CapituloPage() {
             
             {isConcluido && <h3 style={{color: 'green', textAlign: 'center'}}>Capítulo Concluído!</h3>}
         </div>
+      </>
     );
 }
 

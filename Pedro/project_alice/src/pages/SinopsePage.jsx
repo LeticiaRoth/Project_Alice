@@ -3,9 +3,10 @@ import Navbar from "../components/Navbar"; // importa a Navbar
 import Synopsis from "../components/SinopsePage/Synopsis";
 import Character from "../components/ChapterBook/Character";
 
-import aliceImage from "../assets/Imagens/Sinopse/AliceGrande.svg";
-import bookCover from "../assets/Imagens/Sinopse/ImageBook.svg";
-import backgroundSinopse from '../assets/Imagens/Sinopse/backgroundSinopse.svg';
+import aliceImage from "../assets/Imagens/Sinopse/AliceImage.svg";
+import bookCover from "../assets/Imagens/Sinopse/LivroImage.svg";
+import backgroundSinopse from '../assets/Imagens/Sinopse/FundoImage.svg';
+import SinopseImage from '../assets/Imagens/Sinopse/SinopseImage.svg';
 
 import "../styles/SinopsePage.css";
 
@@ -15,7 +16,7 @@ export default function SinopsePage() {
       className="sinopsePage"
       style={{ backgroundImage: `url(${backgroundSinopse})` }}
     >
-      <Navbar />
+      <Navbar bgColor="bgBlue"/>
       <div className="homeContainer">
         <Character img={aliceImage} alt="Alice" />
         <Synopsis 
@@ -31,3 +32,5 @@ export default function SinopsePage() {
     </div>
   );
 }
+
+ 

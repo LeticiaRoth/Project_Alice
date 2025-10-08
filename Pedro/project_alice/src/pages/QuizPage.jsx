@@ -52,7 +52,7 @@ export default function QuizPage() {
 
         if (formattedQuestions.length === 0) {
             // Caso não haja quiz, pode-se concluir automaticamente ou avisar
-            alert("Não há perguntas de quiz para este capítulo.");
+            alert("Não há perguntas de quiz para este capítulo. Ou login não realizado");
             handleConcluirCapitulo();
             return;
         }
@@ -130,7 +130,7 @@ export default function QuizPage() {
 
   // --- Renderização ---
   if (loading) return <div className="quizContainer">Carregando Quiz...</div>;
-  if (questions.length === 0 && !showModal) return <div className="quizContainer">Nenhuma pergunta encontrada para este quiz.</div>;
+  if (questions.length === 0 && !showModal) return <div className="quizContainer">Nenhuma pergunta encontrada para este quiz. Ou login não realizado</div>;
   
   const currentQuestion = questions[currentQuestionIndex];
 
