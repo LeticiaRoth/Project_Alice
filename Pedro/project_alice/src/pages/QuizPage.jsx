@@ -18,7 +18,7 @@ const API_URL = 'http://localhost:8090'; // Novo: Para a API
 export default function QuizPage() {
   const { idCapitulo } = useParams(); // Novo: Pega o ID do capítulo da URL
   const navigate = useNavigate(); // Novo
-  const { token } = useAuth(); // Novo: Para autenticação
+  const { token, isAuthenticated, loading: authLoading } = useAuth(); // Novo: Para autenticação
     
   const [questions, setQuestions] = useState([]); // Novo: Estado para as perguntas da API
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -28,6 +28,10 @@ export default function QuizPage() {
 
   // --- BUSCA DAS PERGUNTAS NA API ---
   useEffect(() => {
+    if (!isAuthenticated) {
+            navigate("/login");
+            return;
+    }
     const fetchQuizQuestions = async () => {
       if (!token || !idCapitulo) {
           console.log(`Token ou ID do Capítulo faltando. Parando a busca. ${idCapitulo}, ${token}`);

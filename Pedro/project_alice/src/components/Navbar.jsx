@@ -12,16 +12,20 @@ export default function Navbar({ bgColor }) {
       <div className="navbarLinks">
         <Link to="/" className="navLink">Início</Link>
         <Link to="/tutorial" className="navLink">Tutorial</Link>
-        {isAuthenticated && (
+
+        {isAuthenticated ? (
           <>
             <Link to="/paginaSelo" className="navLink">Meus Selos</Link>
             <button className="logoutBtn" onClick={logout}>
               SAIR <FaSignOutAlt className="logoutIcon" />
             </button>
           </>
+        ) : (
+          <Link to="/login" className="navLink">Login</Link>
         )}
       </div>
     </nav>
   );
 }
+
  
