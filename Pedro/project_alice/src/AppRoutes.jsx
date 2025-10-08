@@ -22,19 +22,20 @@ export default function AppRoutes() {
     }
 
     return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/tutorial" element={<TutorialPage />} />
-            <Route path="/paginaSelo" element={<SeloPage />} />
-            <Route path="/paginaCapitulos" element={<CapitulosPage />}/>
-            <Route path="/paginaQuiz/:idCapitulo" element={<QuizPage />}/>
-            <Route path="/paginaSinopse" element={<SinopsePage />}/>
-            <Route path='/paginaCapitulos/:idCapitulo' element={<CapituloPage />}/>
+        <AuthProvider>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/tutorial" element={<TutorialPage />} />
+                <Route path="/paginaSelo" element={<SeloPage />} />
+                <Route path="/paginaCapitulos" element={<CapitulosPage />}/>
+                <Route path="/paginaQuiz/:idCapitulo" element={<QuizPage />}/>
+                <Route path="/paginaSinopse" element={<SinopsePage />}/>
+                <Route path='/paginaCapitulos/:idCapitulo' element={<CapituloPage />}/>
 
-            {/* Login e Cadastro*/}
-            <Route path="/login" element={<LoginPage />}/>
-            <Route path="/cadastro" element={<CadastroPage />}/>
-        </Routes>
+                <Route path="/login" element={<LoginPage />}/>
+                <Route path="/cadastro" element={<CadastroPage />}/>
+            </Routes>
+        </AuthProvider>
     );
 }
 

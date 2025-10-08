@@ -26,13 +26,14 @@ import CupsTopLeft from "../assets/Imagens/CapitulosPage/Decor/CupsTopLeft.svg";
 
 import { useAuth } from '../context/AuthContext.jsx';
 import { useState, useEffect } from "react"; 
+import axios from 'axios';
 
 
 const API_URL = 'http://localhost:8090';
 
 const CapitulosPage = () => {
 
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const { user, isAuthenticated, token, loading: authLoading } = useAuth();
 
