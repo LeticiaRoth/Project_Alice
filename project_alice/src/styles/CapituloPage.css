@@ -1,92 +1,197 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+/* --- Configurações Globais --- */
+body {
+    background-color: #E9F4FF;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
-
-.chapterPage {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 40px;
+ 
+.capituloContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
-/* Texto introdutório */
-.chapterIntro {
+ 
+.mainContent {
+    position: relative;
+    flex-grow: 1;
+    padding: 6px 2rem;
+}
+ 
+.statusMessage {
+    padding: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.statusMessage.error {
+    color: red;
+}
+ 
+/* --- Layout Principal (Duas Colunas) --- */
+.contentWrapper {
+    display: flex;
+    align-items: flex-start;    
+}
+ 
+/* --- Coluna da Esquerda: Interação --- */
+.interactionArea {
+    display: flex;
+    align-items: center;
+    flex-basis: 45%;
+    margin-top: 50px;
+}
+ 
+.characterImage {
+    width: 390px;
+    height: auto;
+    position: relative;
+    z-index: 10;
+    margin-bottom: -50px;
+    left: 360px;
+    top: 70px;
+}
+ 
+.interactionBox {
+    background-color: #EAF5E1;
+    border: 5px solid #4A7A3A;
+    left: 300px;
+    border-radius: 15px;
+    padding: 2rem;
+    padding-top: 3rem;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+ 
+.headerText h2 { font-size: 28px; color: #1E3726; margin: 0; }
+.headerText p { font-size: 26px; color: #555; margin-top: 30px; }
+ 
+.chapterTitleBox {
+    padding: 0.8rem;
+    margin: 0 auto;
+    width: 80%;
+}
+.chapterTitleBox span { font-weight: bold; color: #1E3726; font-size: 28px; }
+.chapterTitleBox p { font-weight: bold; font-size: 24px; color: #3D3934; margin-top: 20px; }
+ 
+.searchForms { display: flex; flex-direction: column; gap: 1.5rem; }
+.formGroup { text-align: left; }
+.formGroup > label { font-weight: bold; font-size: 24px; color: #B2362D; margin-bottom: 0.5rem; display: block; }
+ 
+.inputRow { display: flex; gap: 1rem; align-items: center; }
+.inputRow input[type="text"] { flex-grow: 1; padding: 0.8rem; border: 2px solid #9A9A9A; border-radius: 8px; font-size: 20px; }
+ 
+.resultBox { display: flex; align-items: center; gap: 0.5rem; background-color: white; border: 2px solid #4A7A3A; border-radius: 8px; padding: 0.8rem; min-width: 150px; }
+.resultBox label { font-size: 20px; color: #9A9A9A; }
+.resultBox span { font-weight: bold; }
+ 
+.chapterPreview {
+  margin-top: 2rem;
+  background-color: #fff;
+  border: 2px solid #4A7A3A;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: left;
+  max-height: 300px;
+  overflow-y: auto;
+}
+ 
+.chapterPreview h3 {
   text-align: center;
-  margin: 10px 0 10px;
-  max-width: 700px;
-}
-
-.chapterIntro h4 {
-  font-size: 32px;
-  font-weight: bold;
-  color: #1e3726;
-  margin-bottom: 18px;
-}
-
-.chapterIntro p {
-  font-size: 28px;
-  color: #555;
-  margin: 0;
-  margin-bottom: 30px;
-}
-
-/* Livro aberto */
-.bookWrapper {
-  display: flex;
-  justify-content: center;
-  width: 1200px; 
-  max-width: 95%; 
-  height: 850px; 
-  margin-top: 50px;
-  background: url("../assets/Imagens/CapituloPage/ImageBookAberto.svg") no-repeat center top;
-  background-size: contain;
-  padding: 80px 100px;
-}
-
-.chapterTexts {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  gap: 60px;
-}
-
-.chapterTextBox {
-  flex: 1;
+  color: #1E3726;
   font-size: 24px;
-  line-height: 1.7;
-  text-align: justify;
-  max-width: 450px;
-  color: #000;
+  margin-bottom: 1rem;
 }
-
-/* Barra de progresso*/
-.progressBarWrapper {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  margin-top: 20px;
+ 
+.chapterText p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
 }
-
-.progressBar {
-  width: 857px;
-  height: 42px;
-  border-radius: 20px;
-  background-color: #ddd;
-  overflow: hidden;
-  border: 1px solid #aaa;
+ 
+ 
+/* --- Coluna da Direita: Leitura --- */
+.readingArea {
+    flex-basis: 55%;
+    background-color: #FFF8E8;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
+    width: 80%;
+    margin: 60px auto;
 }
-
-.progressFill {
-  height: 100%;
-  background: linear-gradient(to right, #36a6dd, #3499C2);
-  transition: width 0.3s ease;
+ 
+.readingArea h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
 }
-
-.navArrow {
-  width: 80px;
-  cursor: pointer;
+ 
+.progressBarContainer {
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin: 1.5rem 0 0.5rem 0;
+    overflow: hidden;
+}
+ 
+.progressBarFill {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+ 
+.pageCounter {
+    text-align: right;
+    font-size: 0.9em;
+    color: #444141;
+    margin: 24px 0 ;
+}
+ 
+.textDisplayArea {
+    border: 1px solid rgb(222, 220, 220)8E8;
+    padding: 1.5rem;
+    line-height: 1.7;
+    min-height: 300px;
+    overflow-y: auto;
+    width: 1000px;
+    border-radius: 5px;
+    background-color: #FFF8E8;
+}
+ 
+.textDisplayArea p {
+  font-size: 24px;
+}
+ 
+.textDisplayArea .highlight {
+    background-color: rgb(97, 199, 231);
+    font-weight: bold;
+}
+ 
+.navigationButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+ 
+.navImage {
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+ 
+.navImage:hover:not(.disabled) {
+    transform: scale(1.1);
+}
+ 
+.navImage.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }

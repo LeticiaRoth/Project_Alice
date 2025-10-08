@@ -16,8 +16,8 @@ body, html {
   margin: 8px 0;
   cursor: pointer;
   transition: 0.2s;
-  width: 328px;
-  height: 48px;
+  width: 60vh;
+  height: 15vh;
 }
 
 .answerButton:hover {
@@ -31,7 +31,7 @@ body, html {
   border: 2px solid #000000;
   padding: 20px;
   width: 930px;
-  height: 550px;
+  height: 600px;
   position: relative;
   text-align: center;
   display: flex;             
@@ -39,6 +39,7 @@ body, html {
   justify-content: center;   
   align-items: center;
   margin: 0 auto;
+  top: 1rem;
 }
 
 .questionHeader {
@@ -57,7 +58,7 @@ body, html {
   border-radius: 5px;
   border: 1px solid #000000;
   padding: 8px 16px 20px;
-  width: 500px;
+  width: 80vh;
   min-height: 200px;
   margin: 0 auto;
 }
@@ -90,7 +91,7 @@ body, html {
 /* Coelho fica ao lado esquerdo do container */
 .coelhoImg {
   position: absolute;
-  left: 60px;
+  left: 2rem;
   bottom: -30px;
   width: 704px;
   height: 652px;
@@ -112,7 +113,7 @@ body, html {
 /* Relógio dentro do card */
 .clockInside {
   position: absolute;
-  top: -80px;
+  top: -70px;
   right: -40px;
   width: 146px;
   height: 179px;

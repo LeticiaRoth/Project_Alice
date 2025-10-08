@@ -22,13 +22,14 @@ const Footer = () => {
             </p>
           </div>
           <div className="footerCard">
-            <h3>Equipe</h3>
+            <h3>Contato</h3>
             <p>
-              Layslla Eduarda Oreti <br />
-              Letícia Roth <br />
-              Nicole Fernanda <br />
-              Pedro Carreteiro
+              Entre em contato:
             </p>
+            <p>
+              mywordland@gmail.com
+            </p>
+            <p>(19) 9933-8734</p>
           </div>
         </div>
 

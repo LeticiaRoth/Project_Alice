@@ -57,3 +57,4 @@ Posteriormente, reescreveu o livro para publicação, acrescentando passagens co
 }
 
 export default Sinopse;
+ 
