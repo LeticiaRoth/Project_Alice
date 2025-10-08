@@ -132,8 +132,8 @@ body, html {
 
 /* imgens dos botões 'Começar' e 'Entrar'*/
 .buttonCard {
-  max-height: 90px;
-  max-width: 290px;
+  max-height: 100px;
+  max-width: 320px;
   cursor: pointer;
   margin-left: 25rem;
   margin-bottom: 20px;

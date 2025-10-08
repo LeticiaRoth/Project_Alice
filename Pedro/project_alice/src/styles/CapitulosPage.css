@@ -5,60 +5,55 @@ body, html {
   height: 100%;
 }
 
-/* ======= Cards ======= */
 .chapterCard {
   position: relative;
-  width: 200px;
-  height: 160px;
-  border: 2px solid;
-  border-radius: 12px;
-  padding: 10px;
+  width: 230px;
+  height: 210px;
+  border: 3px solid;
+  border-radius: 45px;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-size: cover;
-  background-position: center;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.05);
 }
 
 .chapterImage {
   position: absolute;
   top: -65px;
-  left: -30px;
-  width: 100px;
+  left: -25px;
+  width: 95px;
   height: auto;
   pointer-events: none;
 }
 
 .chapterTitle {
-  font-size: 14px;
+  padding-top: 35px;
+  font-size: 24px;
   font-weight: bold;
-  margin-top: 30px;
+  color: #000000;
 }
 
 .chapterSubtitle {
-  font-size: 13px;
-  margin: 5px 0;
-}
-
-.chapterDescription {
-  font-size: 12px;
-  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
 }
 
 .chapterButton {
-  margin-top: 10px;
-  padding: 5px 12px;
-  background-color: var(--button-color, #f06292);
+  width: 114px;
+  height: 37px;
+  margin-top: 5px;
+  padding: 5px 15px;
+  background-color: #FF6663;
   color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 100px;
   cursor: pointer;
-  font-size: 12px;
-  transition: 0.3s ease;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .chapterButton:hover {
-  opacity: 0.9;
+  background-color: #f6605e;
 }
 
 /* ======= Página ======= */
@@ -66,7 +61,7 @@ body, html {
   min-height: 100vh;
   background-color: #f7fff9;
   padding: 20px;
-  position: relative; /* necessário p/ posicionar decorativos */
+  position: relative;
   overflow: hidden;
 }
 
@@ -89,8 +84,9 @@ body, html {
 .chaptersGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
+  gap: 90px 10px;
   justify-items: center;
+  margin-top: 100px;
 }
 
 /* ======= Xícaras ======= */

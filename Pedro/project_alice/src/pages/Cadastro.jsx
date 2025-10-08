@@ -37,7 +37,7 @@ export default function Cadastro() {
             senhaUsuario: password,
         };
 
-        // 🚨 Opcional: Log para verificar os dados antes de enviar
+        // Opcional: Log para verificar os dados antes de enviar
         // console.log("Enviando dados:", userData); 
 
         try {
@@ -111,7 +111,7 @@ export default function Cadastro() {
                 <ArrowButton
                     text={loading ? "CADASTRANDO..." : "CADASTRAR"}
                     loading={loading}
-                    type="submit" // 👈 É ESSENCIAL
+                    type="submit" // essencial
                 />
 
                 {/* Mensagem de Feedback */}
@@ -119,7 +119,7 @@ export default function Cadastro() {
                     <p style={{ 
                         color: isSuccess ? 'green' : 'red', 
                         marginTop: '20px',
-                        fontWeight: 'bold' // Adicionei um pouco de estilo para o feedback
+                        fontWeight: 'bold' // adição de um estilo para o feedback
                     }}>
                         {message}
                     </p>

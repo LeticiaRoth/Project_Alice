@@ -56,30 +56,30 @@ body, html {
 }
 
 .coroaRainha {
-  top: -120px;
+  top: -100px;
   right: -180px;
-  width: 280px;
+  width: 265px;
   z-index: 10;
 }
 
 .valleteCopas {
-  bottom: -120px;
-  left: -300px;
+  bottom: -68px;
+  left: -620px;
   width: 420px;
   z-index: 10;
 }
 
 .cheapCartaTop {
-  top: -120px;
-  left: -300px;
-  width: 470px;
+  top: -80px;
+  left: -680px;
+  width: 540px;
   z-index: 10;
 }
 
 .cheapCartaBottom {
-  bottom: -120px;
-  right: -300px;
-  width: 400px;
+  bottom: -100px;
+  right: -620px;
+  width: 540px;
   z-index: 10;
 }
 
