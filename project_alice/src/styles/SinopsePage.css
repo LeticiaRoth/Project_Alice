@@ -13,6 +13,16 @@
   z-index: 0;
 }
 
+.synopsisWrapper {
+  position: absolute;
+  right: 2rem;     
+  top: 2rem;        
+  width: 100vh; 
+  height: 80vh;
+  display: flex;
+  align-items: stretch;
+}
+
 .containerSinopse {
   position: relative;
   width: 100%;
@@ -43,22 +53,11 @@
 
 .bookOpen {
   position: absolute;
-  left: 440px;          
-  top: 350px;          
+  left: 22rem;          
+  top: 10rem;          
   width: 500px;
   height: auto;
   z-index: 10;
-}
-
-.synopsisWrapper {
-  position: absolute;
-  right: 120px;     
-  top: 160px;        
-  width: 900px;     
-  min-height: 70vh;
-  display: flex;
-  align-items: stretch;
-  z-index: 4;
 }
 
 .synopsisStrip {
@@ -77,7 +76,7 @@
   padding: 50px 30px;      
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 0.8rem;
 }
 
@@ -132,21 +131,4 @@
   cursor: not-allowed;
 }
 
-@media (max-width: 1024px) {
-  .aliceImage {
-    left: 2vw;
-    width: 260px;
-  }
-  
-  .bookOpen {
-    right: 35vw;
-    width: 300px;
-    top: 20vh;
-  }
-  
-  .synopsis {
-    right: 2vw;
-    width: 90%;
-    top: 5vh;
-  }
-}
+ 

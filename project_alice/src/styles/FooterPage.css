@@ -6,12 +6,10 @@
 
 .footer {
   width: 100%;
-  min-height: 650px; 
   background-size: cover;    
   background-color: #FFF4C8; 
   background-position: center; 
   background-repeat: no-repeat; 
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,20 +17,23 @@
   color: #fff;
   text-align: center;
   position: relative;
-  padding-top: 120px; 
+  padding-top: 250px; 
+  z-index: 10;
 }
 
 .footerOverlay {
+  position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 0 auto;
   padding: 40px 20px;
+  z-index: -20;
 }
 
 /* área dos cards */
 .footerCards {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   padding-bottom: 25px;
@@ -41,9 +42,10 @@
 }
 
 .footerCard {
-  max-width: 300px;
+  max-width: 350px;
   text-align: left;
   margin: 20px;
+  text-align: justify;
 }
 
 .footerCard h3 {
@@ -55,7 +57,7 @@
 
 .footerCard p {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.2;
   color: #FFFFFF;
 }
 
@@ -65,3 +67,4 @@
   font-size: 20px;
   color: #FFFFFF;
 }
+ 

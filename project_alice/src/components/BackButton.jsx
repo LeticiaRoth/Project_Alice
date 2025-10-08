@@ -1,15 +1,19 @@
 import React from "react";
+import '../styles/BackButton.css';
 import { useNavigate } from "react-router-dom";
-import '../styles/BackButton.css'; 
 
-const BackButton = ({ to = "/", label = "Voltar" }) => {
-  const navigate = useNavigate();
+const BackButton = ({ onClick }) => {
+    const navigate = useNavigate();
 
-  return (
-    <button className="backButton" onClick={() => navigate("/paginaCapitulos")}>
-      {label}
-    </button>
-  );
+    const handleClick = () => {
+        navigate("/paginaCapitulos");
+    };
+    
+    return (
+        <div className="backButtonContainer" onClick={handleClick}>
+        <button className="backButton">Voltar</button>
+        </div>
+    );
 };
 
 export default BackButton;
