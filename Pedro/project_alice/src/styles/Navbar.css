@@ -35,3 +35,28 @@
 .navLink:hover{
   text-decoration: underline;
 }
+
+.logoutBtn {
+  background-color: #f35d5d;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.logoutBtn:hover {
+  background-color: #d94a4a;
+  transform: scale(1.05);
+}
+
+.logoutIcon {
+  font-size: 22px;
+}
+ 
