@@ -2,7 +2,7 @@
 
 import React from "react";
 
-// 🌟 1. Adicionamos 'value' e 'onChange' às props
+// adicionando 'value' e 'onChange' às props
 export default function InputField({ label, type, placeholder, required, error, value, onChange }) {
    return (
     <div className="inputGroup">

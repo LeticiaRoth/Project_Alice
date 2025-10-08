@@ -1,18 +1,13 @@
-#pip install --upgrade mysql-connector-python 
-
 import mysql.connector
 import pdfplumber
 
-# Conexão com o banco
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="root",
+    password="root", # <-- Altere aqui a senha do banco de dados caso necessário
     database="chapeleiro"
 )
 cursor = conn.cursor()
-
-pdf_path = "Alice-no-País-das-maravilhas.pdf"
 
 # Lista dos títulos dos capítulos na ordem da tabela capitulo
 titulos_capitulos = [

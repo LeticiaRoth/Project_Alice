@@ -56,68 +56,66 @@ body, html {
 }
 
 .coroaRainha {
-  top: -120px;
+  top: -100px;
   right: -180px;
-  width: 280px;
+  width: 265px;
   z-index: 10;
 }
 
 .valleteCopas {
-  bottom: -120px;
-  left: -300px;
+  bottom: -68px;
+  left: -620px;
   width: 420px;
   z-index: 10;
 }
 
 .cheapCartaTop {
-  top: -120px;
-  left: -300px;
-  width: 470px;
+  top: -80px;
+  left: -680px;
+  width: 540px;
   z-index: 10;
 }
 
 .cheapCartaBottom {
-  bottom: -120px;
-  right: -300px;
-  width: 400px;
+  bottom: -100px;
+  right: -620px;
+  width: 540px;
   z-index: 10;
 }
 
 /* Inputs */
-.inputGroup{
-  margin-left: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 25px;
+.inputGroup {
+  text-align: left;
+  margin-bottom: 18px;
   position: relative;
+  
 }
 
 .inputGroup label {
-  width: 90%;
-  max-width: 650px;
-  text-align: left;
   font-weight: bold;
   font-size: 24px;
   color: #25759F;
-  margin-bottom: 8px;
+  display: block;
+  margin-bottom: 15px;
 }
 
 .inputGroup input {
-  margin-bottom: 20px;
-  width: 90%;
-  max-width: 650px;
+  margin-bottom: 10px;
+  width: 525px;
   height: 40px;
   padding: 8px 10px;
   border: 1px solid #9A9A9A;
   border-radius: 10px;
   background-color: #F1F1F1;
-  cursor: text;
+  cursor: pointer;
   font-size: 24px;
+}
+
+.inputGroup input:active {
+  border: 1px solid #767474;
 }
 
 .inputGroup ::placeholder{
   font-size: 20px;
   color: #646462;
 }
-

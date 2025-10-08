@@ -19,8 +19,7 @@ public class AuthController {
 
     @Autowired
     private TokenService tokenService;
-
-    // DTOs para comunicação
+    
     public record LoginDTO(String emailUsuario, String senhaUsuario) {}
     public record TokenResponse(String token) {}
 
